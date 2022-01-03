@@ -1,0 +1,2 @@
+# starstruck
+Seek your fortune!
