@@ -39,7 +39,7 @@ app.get('/tarot', function(request, response) {
     let players = JSON.parse(fs.readFileSync('data/users.json'));
 
 
-    fs.writeFileSync('data/opponents.json', JSON.stringify(players));
+    fs.writeFileSync('data/users.json', JSON.stringify(players));
 
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
