@@ -1,0 +1,72 @@
+{
+  "Mario": {
+    "name": "Mario",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/a/a9/MarioNSMBUDeluxe.png",
+    "win": 23,
+    "lose": 11,
+    "tie": 1
+  },
+  "Luigi": {
+    "name": "Luigi",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/7/73/Luigi_NSMBUDX.png",
+    "win": 11,
+    "lose": 5,
+    "tie": 1
+  },
+  "Toad": {
+    "name": "Toad",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/d/d1/Toad_3D_Land.png",
+    "win": 2,
+    "lose": 6,
+    "tie": 1
+  },
+  "Peach": {
+    "name": "Peach",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/1/16/Princess_Peach_Stock_Art.png",
+    "win": 20,
+    "lose": 5,
+    "tie": 1
+  },
+  "Bowser": {
+    "name": "Bowser",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/9/92/Bowser_Stock_Art_2021.png",
+    "win": 101,
+    "lose": 5,
+    "tie": 0
+  },
+  "Yoshi": {
+    "name": "Yoshi",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/d/db/Yoshi_%28Nintendo_character%29.png",
+    "win": 10,
+    "lose": 7,
+    "tie": 2
+  },
+  "Birdo": {
+    "name": "Birdo",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/f/f9/Birdo-MP9.png",
+    "win": 11,
+    "lose": 5,
+    "tie": 0
+  },
+  "Koopa": {
+    "name": "Koopa",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/b/b2/Koopa_Troopa_NSMBU.png",
+    "win": 1,
+    "lose": 2,
+    "tie": 0
+  },
+  "Toadette": {
+    "name": "Toadette",
+    "photo": "https://www.mariowiki.com/images/b/bf/NewSuperMarioBrosUDeluxe_Toadette.png",
+    "win": 0,
+    "lose": 1,
+    "tie": 1
+  },
+  "D. Kong": {
+    "name": "D. Kong",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/d/d4/Donkey_Kong_character.png",
+    "win": 0,
+    "lose": 0,
+    "tie": 0
+  }
+}
