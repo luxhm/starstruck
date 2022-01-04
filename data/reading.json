@@ -1,0 +1,9 @@
+{
+  "User": {"numberDrawn": 1,
+  	"CardsDrawn": ["The Moon"],
+  	"PercentPositive":  0,
+  	"PercentageBleak": 100,
+  	"Vibe": ["Deception", "difficult period", "fear", "hidden things", "insecurity", "mental confusion"],
+  	"Future" : "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself"
+  }
+}
