@@ -16,3 +16,11 @@ Seek your fortune!
 6.  Sending information to the server in the body of a POST request using <form>
 
 7.  Retrieving information from the body of a POST request with Express
+
+else{
+ response.status(404);
+ response.setHeader('Content-Type', 'text/html')
+ response.render("error", {
+   "errorCode":"404"
+ });
+}

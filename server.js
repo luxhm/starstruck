@@ -31,52 +31,46 @@ app.get('/play', function(request, response) {
     });
 });
 
-app.get('/results', function(request, response) {
+app.get('/tarot', function(request, response) {
+    response.status(200);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("index");
+
     let players = JSON.parse(fs.readFileSync('data/opponents.json'));
 
-    //accessing URL query string information from the request object
-    let opponent = request.query.opponent;
-    let playerThrow = request.query.throw;
 
-    if(players[opponent]){
-      let opponentThrowChoices=["Paper", "Rock", "Scissors"];
-      let results={};
+    fs.writeFileSync('data/opponents.json', JSON.stringify(players));
 
-      results["playerThrow"]=playerThrow;
-      results["opponentName"]=opponent;
-      results["opponentPhoto"]=players[opponent].photo;
-      results["opponentThrow"] = opponentThrowChoices[Math.floor(Math.random() * 3)];
+    response.status(200);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("tarot", {
+      data: results
+    });
+});
 
-      if(results["playerThrow"]===results["opponentThrow"]){
-        results["outcome"] = "tie";
-      }else if(results["playerThrow"]==="Paper"){
-        if(results["opponentThrow"]=="Scissors") results["outcome"] = "lose";
-        else results["outcome"] = "win";
-      }else if(results["playerThrow"]==="Scissors"){
-        if(results["opponentThrow"]=="Rock") results["outcome"] = "lose";
-        else results["outcome"] = "win";
-      }else{
-        if(results["opponentThrow"]=="Paper") results["outcome"] = "lose";
-        else results["outcome"] = "win";
+app.post('/tarot', function(request, response) {
+    let opponentName = request.body.opponentName;
+    let opponentPhoto = request.body.opponentPhoto;
+    if(opponentName&&opponentPhoto){
+      let opponents = JSON.parse(fs.readFileSync('data/opponents.json'));
+      let newOpponent={
+        "name": opponentName,
+        "photo": opponentPhoto,
+        "win":0,
+        "lose": 0,
+        "tie": 0,
       }
-
-      if(results["outcome"]=="lose") players[opponent]["win"]++;
-      else if(results["outcome"]=="win") players[opponent]["lose"]++;
-      else players[opponent]["tie"]++;
-
-      //update data store to permanently remember results
-      fs.writeFileSync('data/opponents.json', JSON.stringify(players));
+      opponents[opponentName] = newOpponent;
+      fs.writeFileSync('data/opponents.json', JSON.stringify(opponents));
 
       response.status(200);
       response.setHeader('Content-Type', 'text/html')
-      response.render("results", {
-        data: results
-      });
+      response.redirect("tarot");
     }else{
-      response.status(404);
+      response.status(400);
       response.setHeader('Content-Type', 'text/html')
       response.render("error", {
-        "errorCode":"404"
+        "errorCode":"400"
       });
     }
 });
@@ -125,39 +119,6 @@ app.get('/opponent/:opponentName', function(request, response) {
       "errorCode":"404"
     });
   }
-});
-
-app.get('/opponentCreate', function(request, response) {
-    response.status(200);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("opponentCreate");
-});
-
-app.post('/opponentCreate', function(request, response) {
-    let opponentName = request.body.opponentName;
-    let opponentPhoto = request.body.opponentPhoto;
-    if(opponentName&&opponentPhoto){
-      let opponents = JSON.parse(fs.readFileSync('data/opponents.json'));
-      let newOpponent={
-        "name": opponentName,
-        "photo": opponentPhoto,
-        "win":0,
-        "lose": 0,
-        "tie": 0,
-      }
-      opponents[opponentName] = newOpponent;
-      fs.writeFileSync('data/opponents.json', JSON.stringify(opponents));
-
-      response.status(200);
-      response.setHeader('Content-Type', 'text/html')
-      response.redirect("/opponent/"+opponentName);
-    }else{
-      response.status(400);
-      response.setHeader('Content-Type', 'text/html')
-      response.render("error", {
-        "errorCode":"400"
-      });
-    }
 });
 
 // Because routes/middleware are applied in order,

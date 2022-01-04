@@ -1,8 +1,15 @@
-<%- include('partials/header', {title:"P, R, S: Tournament of Champions"}) -%>
+<%- include('partials/header', {title:"Create Opponent"}) -%>
 
-<p> Welcome to the official site of the Paper, Rock, Scissors: Tournament of Champions!
-  <br>
-  <br>
-  <a href="/play">Click to play a round of Paper, Rock, Scissors</a>
+<h2>Tell us a little about yourself!</h2>
 
-  <%- include('partials/footer') -%>
+<form action="/tarot" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="opponentName" value=""><br>
+  <label for="photo">Link to Photo:</label>
+  <input type="text" id="photo" name="opponentPhoto" value=""><br>
+  <br><br>
+  <input type="submit" value="Create a new user!">
+
+</form>
+
+<%- include('partials/footer') -%>
