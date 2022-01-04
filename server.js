@@ -22,6 +22,33 @@ app.get('/', function(request, response) {
   response.render("index");
 });
 
+app.post('/', function(request, response) {
+  let opponentName = request.body.opponentName;
+  let opponentPhoto = request.body.opponentPhoto;
+  if(opponentName&&opponentPhoto){
+    let opponents = JSON.parse(fs.readFileSync('data/users.json'));
+    let newOpponent={
+      "name": opponentName,
+      "photo": opponentPhoto,
+      "win":0,
+      "lose": 0,
+      "tie": 0,
+    }
+    opponents[opponentName] = newOpponent;
+    fs.writeFileSync('data/users.json', JSON.stringify(opponents));
+
+    response.status(200);
+    response.setHeader('Content-Type', 'text/html')
+    response.redirect("tarot");
+  }else{
+    response.status(400);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("error", {
+      "errorCode":"400"
+    });
+  }
+});
+
 app.get('/play', function(request, response) {
     let players = JSON.parse(fs.readFileSync('data/users.json'));
     response.status(200);
@@ -39,7 +66,7 @@ app.get('/tarot', function(request, response) {
     let players = JSON.parse(fs.readFileSync('data/users.json'));
 
 
-    fs.writeFileSync('data/opponents.json', JSON.stringify(players));
+    fs.writeFileSync('data/users.json', JSON.stringify(players));
 
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
@@ -48,6 +75,7 @@ app.get('/tarot', function(request, response) {
     });
 });
 
+/*
 app.post('/tarot', function(request, response) {
     let opponentName = request.body.opponentName;
     let opponentPhoto = request.body.opponentPhoto;
@@ -74,7 +102,8 @@ app.post('/tarot', function(request, response) {
       });
     }
 });
-
+*/
+/*
 app.get('/scores', function(request, response) {
   let opponents = JSON.parse(fs.readFileSync('data/users.json'));
   let opponentArray=[];
@@ -95,7 +124,7 @@ app.get('/scores', function(request, response) {
     opponents: opponentArray
   });
 });
-
+*/
 app.get('/opponent/:opponentName', function(request, response) {
   let opponents = JSON.parse(fs.readFileSync('data/users.json'));
 
