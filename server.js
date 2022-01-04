@@ -23,7 +23,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/play', function(request, response) {
-    let players = JSON.parse(fs.readFileSync('data/opponents.json'));
+    let players = JSON.parse(fs.readFileSync('data/users.json'));
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.render("play", {
@@ -36,7 +36,7 @@ app.get('/tarot', function(request, response) {
     response.setHeader('Content-Type', 'text/html')
     response.render("index");
 
-    let players = JSON.parse(fs.readFileSync('data/opponents.json'));
+    let players = JSON.parse(fs.readFileSync('data/users.json'));
 
 
     fs.writeFileSync('data/opponents.json', JSON.stringify(players));
@@ -52,7 +52,7 @@ app.post('/tarot', function(request, response) {
     let opponentName = request.body.opponentName;
     let opponentPhoto = request.body.opponentPhoto;
     if(opponentName&&opponentPhoto){
-      let opponents = JSON.parse(fs.readFileSync('data/opponents.json'));
+      let opponents = JSON.parse(fs.readFileSync('data/users.json'));
       let newOpponent={
         "name": opponentName,
         "photo": opponentPhoto,
@@ -61,7 +61,7 @@ app.post('/tarot', function(request, response) {
         "tie": 0,
       }
       opponents[opponentName] = newOpponent;
-      fs.writeFileSync('data/opponents.json', JSON.stringify(opponents));
+      fs.writeFileSync('data/users.json', JSON.stringify(opponents));
 
       response.status(200);
       response.setHeader('Content-Type', 'text/html')
@@ -76,7 +76,7 @@ app.post('/tarot', function(request, response) {
 });
 
 app.get('/scores', function(request, response) {
-  let opponents = JSON.parse(fs.readFileSync('data/opponents.json'));
+  let opponents = JSON.parse(fs.readFileSync('data/users.json'));
   let opponentArray=[];
 
   //create an array to use sort, and dynamically generate win percent
@@ -97,7 +97,7 @@ app.get('/scores', function(request, response) {
 });
 
 app.get('/opponent/:opponentName', function(request, response) {
-  let opponents = JSON.parse(fs.readFileSync('data/opponents.json'));
+  let opponents = JSON.parse(fs.readFileSync('data/users.json'));
 
   // using dynamic routes to specify resource request information
   let opponentName = request.params.opponentName;
