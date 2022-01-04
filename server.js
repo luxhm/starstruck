@@ -30,9 +30,6 @@ app.post('/', function(request, response) {
     let newOpponent={
       "name": opponentName,
       "photo": opponentPhoto,
-      "win":0,
-      "lose": 0,
-      "tie": 0,
     }
     opponents[opponentName] = newOpponent;
     fs.writeFileSync('data/users.json', JSON.stringify(opponents));
