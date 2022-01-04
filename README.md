@@ -24,3 +24,10 @@ else{
    "errorCode":"404"
  });
 }
+
+
+<img src="<%=data.opponentPhoto%>" height=150 />
+<h2><%=data.opponentName%> threw <%=data.opponentThrow%></h2>
+<h2>You threw <%=data.playerThrow%></h2>
+
+<h1>You <%=data.outcome%>!</h1>

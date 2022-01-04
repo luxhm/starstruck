@@ -52,11 +52,9 @@ app.post('/', function(request, response) {
 app.get('/tarot', function(request, response) {
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
-    response.render("index");
+    response.render("tarot");
 
     let players = JSON.parse(fs.readFileSync('data/users.json'));
-
-
     fs.writeFileSync('data/users.json', JSON.stringify(players));
 
     response.status(200);
@@ -66,8 +64,7 @@ app.get('/tarot', function(request, response) {
     });
 });
 
-/*
-app.get('/scores', function(request, response) {
+app.get('/readings', function(request, response) {
   let opponents = JSON.parse(fs.readFileSync('data/users.json'));
   let opponentArray=[];
 
@@ -83,34 +80,9 @@ app.get('/scores', function(request, response) {
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("scores",{
+  response.render("readings",{
     opponents: opponentArray
   });
-});
-*/
-app.get('/opponent/:opponentName', function(request, response) {
-  let opponents = JSON.parse(fs.readFileSync('data/users.json'));
-
-  // using dynamic routes to specify resource request information
-  let opponentName = request.params.opponentName;
-
-  if(opponents[opponentName]){
-    opponents[opponentName].win_percent = (opponents[opponentName].win/parseFloat(opponents[opponentName].win+opponents[opponentName].lose+opponents[opponentName].tie) * 100).toFixed(2);
-    if(opponents[opponentName].win_percent=="NaN") opponents[opponentName].win_percent=0;
-
-    response.status(200);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("opponentDetails",{
-      opponent: opponents[opponentName]
-    });
-
-  }else{
-    response.status(404);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("error", {
-      "errorCode":"404"
-    });
-  }
 });
 
 // Because routes/middleware are applied in order,
