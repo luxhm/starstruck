@@ -19,21 +19,21 @@
       Win %
     </th>
   </tr>
-  <%for(let i =0; i<opponents.length; i++){%>
+  <%for(let i =0; i<users.length; i++){%>
   <th>
-    <a href="/opponent/<%=opponents[i].name%>"><%=opponents[i].name%></a>
+    <a href="/user/<%=users[i].name%>"><%=users[i].name%></a>
   </th>
   <th>
-    <%=opponents[i].win%>
+    <%=users[i].birthday%>
   </th>
   <th>
-    <%=opponents[i].lose%>
+    <%=users[i].sunSign%>
   </th>
   <th>
-    <%=opponents[i].tie%>
+    <%=users[i].moonSign%>
   </th>
   <th>
-    <%=opponents[i].win_percent%>
+    <%=users[i].risingSign%>
   </th>
   </tr>
   <%}%>

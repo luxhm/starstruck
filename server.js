@@ -69,23 +69,23 @@ app.get('/tarot', function(request, response) {
 });
 
 app.get('/readings', function(request, response) {
-  let opponents = JSON.parse(fs.readFileSync('data/users.json'));
-  let opponentArray=[];
+  let users = JSON.parse(fs.readFileSync('data/users.json'));
+  let userArray = [];
 
   //create an array to use sort, and dynamically generate win percent
-  for(name in opponents){
-    opponents[name].win_percent = (opponents[name].win/parseFloat(opponents[name].win+opponents[name].lose+opponents[name].tie) * 100).toFixed(2);
-    if(opponents[name].win_percent=="NaN") opponents[name].win_percent=0;
-    opponentArray.push(opponents[name])
+  for(name in users){
+    users[name].win_percent = (users[name].win/parseFloat(users[name].win+users[name].lose+users[name].tie) * 100).toFixed(2);
+    if(users[name].win_percent=="NaN") users[name].win_percent=0;
+    userArray.push(users[name])
   }
-  opponentArray.sort(function(a, b){
+  userArray.sort(function(a, b){
     return parseFloat(b.win_percent)-parseFloat(a.win_percent);
   })
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("readings",{
-    opponents: opponentArray
+    users: userArray
   });
 });
 
