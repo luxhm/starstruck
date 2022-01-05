@@ -54,17 +54,14 @@ app.post('/', function(request, response) {
 });
 
 app.get('/tarot', function(request, response) {
-    response.status(200);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("tarot");
-
     let players = JSON.parse(fs.readFileSync('data/users.json'));
-    fs.writeFileSync('data/users.json', JSON.stringify(players));
+    let tarotCards = JSON.parse(fs.readFileSync('data/tarotCards.json'));
 
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.render("tarot", {
-      data: results
+      users: players, 
+      tarotCards: tarotCards
     });
 });
 
