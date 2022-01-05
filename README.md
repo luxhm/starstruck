@@ -31,3 +31,83 @@ else{
 <h2>You threw <%=data.playerThrow%></h2>
 
 <h1>You <%=data.outcome%>!</h1>
+
+,
+  "The Emperor": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+  "The Hierophant": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+  "The Lovers": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+  "The Chariot": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+  "Strength": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+  "The Hermit": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+  "Justice": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+  "Death": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+  "Temperance": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+  "The Devil": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  },
+
+  "The Star": {
+    "Photo": "https://en.wikipedia.org/wiki/The_Moon_(Tarot_card)#/media/File:RWS_Tarot_18_Moon.jpg",
+    "Depiction": "Full moon, twin pillars, two wolves howling, stream to	the ocean, crayfish emerging out of water",
+    "Meaning": "A time when something is not as it appears to be. Perhaps a misunderstanding on your part, or a truth you cannot admit to yourself",
+    "Keywords": ["deception", "difficult period", "fear", "hidden things","insecurity", "mental confusion"],
+    "Element": "Water"
+  }
