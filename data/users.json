@@ -1,1 +1,9 @@
-{"Nathalie":{"name":"Nathalie","birthday":"Sept 18, 2003","sunSign":"Virgo","moonSign":"Gemini","risingSign":"Libra"},"Lux":{"name":"Lux","birthday":"2/10/2004","sunSign":"capricorn","moonSign":"capricorn","risingSign":"capricorn"}}
+{
+  "Lux": {
+    "name": "Lux",
+    "birthday": "2/10/2004",
+    "sunSign": "capricorn",
+    "moonSign": "capricorn",
+    "risingSign": "capricorn"
+  }
+}
