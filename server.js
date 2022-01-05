@@ -23,16 +23,23 @@ app.get('/', function(request, response) {
 });
 
 app.post('/', function(request, response) {
-  let opponentName = request.body.opponentName;
-  let opponentPhoto = request.body.opponentPhoto;
-  if(opponentName&&opponentPhoto){
-    let opponents = JSON.parse(fs.readFileSync('data/users.json'));
-    let newOpponent={
-      "name": opponentName,
-      "photo": opponentPhoto,
+  let userName = request.body.userName;
+  let userBday = request.body.userBday;
+  let userSun = request.body.userSun;
+  let userMoon = request.body.userMoon;
+  let userRising = request.body.userRising;
+
+  if(userName&&userBday&&userSun&&userMoon&&userRising){
+    let users = JSON.parse(fs.readFileSync('data/users.json'));
+    let newUser ={
+      "name": userName,
+      "birthday": userBday,
+      "sunSign": userSun,
+      "moonSign": userMoon,
+      "risingSign": userRising,
     }
-    opponents[opponentName] = newOpponent;
-    fs.writeFileSync('data/users.json', JSON.stringify(opponents));
+    users[userName] = newUser;
+    fs.writeFileSync('data/users.json', JSON.stringify(users));
 
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
