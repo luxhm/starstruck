@@ -54,30 +54,69 @@ app.post('/', function(request, response) {
 });
 
 app.get('/tarot', function(request, response) {
-    let players = JSON.parse(fs.readFileSync('data/users.json'));
+    let users = JSON.parse(fs.readFileSync('data/users.json'));
     let tarotCards = JSON.parse(fs.readFileSync('data/tarotCards.json'));
+    let tarotArray = [];
+
+    for(i in tarotCards){
+      tarotArray.push(i);
+    }
+
+    let randomNum = Math.floor(Math.random()*12)+1;
+    let randomCard = tarotArray[randomNum];
+    console.log(tarotArray[randomNum]);
+    /*
+    for(name in users){
+      users[name].win_percent = (users[name].win/parseFloat(users[name].win+users[name].lose+users[name].tie) * 100).toFixed(2);
+      if(users[name].win_percent=="NaN") users[name].win_percent=0;
+      userArray.push(users[name])
+    }*/
 
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.render("tarot", {
-      users: players, 
-      tarotCards: tarotCards
+      users: users,
+      tarotCards: tarotCards,
+      randomCard: randomCard
     });
 });
+
+/*
+app.post('/tarot', function(request, response) {
+  let userName = request.body.userName;
+  let userBday = request.body.userBday;
+  let userSun = request.body.userSun;
+  let userMoon = request.body.userMoon;
+  let userRising = request.body.userRising;
+
+  if(userName&&userBday&&userSun&&userMoon&&userRising){
+    let users = JSON.parse(fs.readFileSync('data/users.json'));
+    let newUser ={
+      "name": userName,
+      "birthday": userBday,
+      "sunSign": userSun,
+      "moonSign": userMoon,
+      "risingSign": userRising,
+    }
+    users[userName] = newUser;
+    fs.writeFileSync('data/users.json', JSON.stringify(users));
+
+    response.status(200);
+    response.setHeader('Content-Type', 'text/html')
+    response.redirect("tarot");
+  }else{
+    response.status(400);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("error", {
+      "errorCode":"400"
+    });
+  }
+}); */
+
 
 app.get('/readings', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let userArray = [];
-
-  //create an array to use sort, and dynamically generate win percent
-  for(name in users){
-    users[name].win_percent = (users[name].win/parseFloat(users[name].win+users[name].lose+users[name].tie) * 100).toFixed(2);
-    if(users[name].win_percent=="NaN") users[name].win_percent=0;
-    userArray.push(users[name])
-  }
-  userArray.sort(function(a, b){
-    return parseFloat(b.win_percent)-parseFloat(a.win_percent);
-  })
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
