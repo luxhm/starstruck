@@ -40,4 +40,53 @@
   <%}%>
 </table>
 
+<br>
+
+<h2>Tarot info</h2>
+<table>
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Photo
+    </th>
+    <th>
+      Meaning
+    </th>
+    <th>
+      Keywords
+    </th>
+    <th>
+      Element
+    </th>
+    <th>
+      Sign
+    </th>
+  </tr>
+  <%for(i in tarotCards){%>
+  <tr>
+  <th>
+    <%= i %>
+  </th>
+  <th>
+    <img src = "<%=tarotCards[i].Photo%>" />
+  </th>
+  <th>
+    <%=tarotCards[i].Meaning%>
+  </th>
+  <th>
+    <%=tarotCards[i].Keywords%>
+  </th>
+  <th>
+    <%=tarotCards[i].Element%>
+  </th>
+  <th>
+    <%=tarotCards[i].Sign%>
+  </th>
+  </tr>
+  <%}%>
+</table>
+
+<br>
 <%- include('partials/footer') -%>
