@@ -125,6 +125,32 @@ app.get('/readings', function(request, response) {
   });
 });
 
+app.get('/user/:userName', function(request, response) {
+  let users = JSON.parse(fs.readFileSync('data/users.json'));
+
+  // using dynamic routes to specify resource request information
+  let userName = request.params.userName;
+  let userBday = request.params.userBday;
+  let userSun = request.params.userSun;
+  let userMoon = request.params.userMoon;
+  let userRising = request.params.userRising;
+
+  if(users[userName]){
+    response.status(200);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("userDetails",{
+      user: users[userName]
+    });
+
+  }else{
+    response.status(404);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("error", {
+      "errorCode":"404"
+    });
+  }
+});
+
 // Because routes/middleware are applied in order,
 // this will act as a default error route in case of
 // a request fot an invalid route

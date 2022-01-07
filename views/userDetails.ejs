@@ -1,0 +1,49 @@
+<%- include('partials/header', {title:"User Details"}) -%>
+
+<h2><%=user.name%></h2>
+
+<table>
+  <tr>
+    <th>
+      Name:
+    </th>
+    <td>
+      <%=user.name%>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Birthday:
+    </th>
+    <td>
+      <%=user.birthday%>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Sun sign:
+    </th>
+    <td>
+      <%=user.sunSign%>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Moon sign:
+    </th>
+    <td>
+      <%=user.moonSign%>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Rising sign:
+    </th>
+    <td>
+      <%=user.risingSign%>
+    </td>
+  </tr>
+</table>
+<br>
+
+<%- include('partials/footer') -%>
