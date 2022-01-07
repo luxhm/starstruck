@@ -62,15 +62,9 @@ app.get('/tarot', function(request, response) {
       tarotArray.push(i);
     }
 
-    let randomNum = Math.floor(Math.random()*12)+1;
+    let randomNum = Math.floor(Math.random()*11)+1;
     let randomCard = tarotArray[randomNum];
     console.log(tarotArray[randomNum]);
-    /*
-    for(name in users){
-      users[name].win_percent = (users[name].win/parseFloat(users[name].win+users[name].lose+users[name].tie) * 100).toFixed(2);
-      if(users[name].win_percent=="NaN") users[name].win_percent=0;
-      userArray.push(users[name])
-    }*/
 
     response.status(200);
     response.setHeader('Content-Type', 'text/html')

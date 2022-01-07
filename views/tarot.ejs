@@ -1,7 +1,11 @@
 <%- include('partials/header', {title:"Tarot"}) -%>
+<h2><%= randomCard %> Tarot Card Drawn!</h2>
+   <img src = "<%=tarotCards[randomCard].Photo%>" height="300">
+   <p> Meaning of <%= randomCard %>: <%=tarotCards[randomCard].Meaning%></p>
+   <p> Keywords: <%=tarotCards[randomCard].Keywords%></p>
+<br>
 
-<h2>User info</h2>
-
+<h2>User info
 <table>
   <tr>
     <th>
