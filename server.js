@@ -75,8 +75,9 @@ app.get('/tarot', function(request, response) {
     });
 });
 
-/*
+
 app.post('/tarot', function(request, response) {
+  /*
   let userName = request.body.userName;
   let userBday = request.body.userBday;
   let userSun = request.body.userSun;
@@ -93,24 +94,28 @@ app.post('/tarot', function(request, response) {
       "risingSign": userRising,
     }
     users[userName] = newUser;
-    fs.writeFileSync('data/users.json', JSON.stringify(users));
 
+    fs.writeFileSync('data/users.json', JSON.stringify(users));
+*/
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
-    response.redirect("tarot");
-  }else{
+    response.redirect("readings");
+  /*}else{
     response.status(400);
     response.setHeader('Content-Type', 'text/html')
     response.render("error", {
       "errorCode":"400"
     });
-  }
-}); */
+  }*/
+});
 
 
 app.get('/readings', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let userArray = [];
+  for(name in users){
+    userArray.push(users[name]);
+  }
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html')

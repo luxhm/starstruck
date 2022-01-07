@@ -92,6 +92,17 @@
   </tr>
   <%}%>
 </table>
-
 <br>
+
+<form action="/tarot" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="userName" value=""><br>
+  <label for="birthday">Birthday (mm/dd/yyyy):</label>
+  <input type="text" id="birthday" name="userBday" value=""><br>
+  <br><br>
+  <input type="submit" value="Claim this future">
+
+</form>
+<br>
+
 <%- include('partials/footer') -%>
