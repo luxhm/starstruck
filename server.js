@@ -117,6 +117,9 @@ app.post('/tarot', function(request, response) {
 app.get('/readings', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let userArray = [];
+  for(name in users){
+    userArray.push(users[name]);
+  }
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
