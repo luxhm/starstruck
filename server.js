@@ -55,12 +55,13 @@ app.post('/', function(request, response) {
 
 app.get('/tarot', function(request, response) {
     let players = JSON.parse(fs.readFileSync('data/users.json'));
+    let playerArray = [];
     let tarotCards = JSON.parse(fs.readFileSync('data/tarotCards.json'));
 
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.render("tarot", {
-      users: players, 
+      users: players,
       tarotCards: tarotCards
     });
 });
@@ -84,6 +85,32 @@ app.get('/readings', function(request, response) {
   response.render("readings",{
     users: userArray
   });
+});
+
+app.get('/user/:userName', function(request, response) {
+  let users = JSON.parse(fs.readFileSync('data/users.json'));
+
+  // using dynamic routes to specify resource request information
+  let userName = request.params.userName;
+  let userBday = request.params.userBday;
+  let userSun = request.params.userSun;
+  let userMoon = request.params.userMoon;
+  let userRising = request.params.userRising;
+
+  if(users[userName]){
+    response.status(200);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("userDetails",{
+      user: users[userName]
+    });
+
+  }else{
+    response.status(404);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("error", {
+      "errorCode":"404"
+    });
+  }
 });
 
 // Because routes/middleware are applied in order,
