@@ -1,8 +1,43 @@
 <%- include('partials/header', {title:"Tarot"}) -%>
 
-<div><% for(i in users){ %>
-  <% console.log(i) %>
-<%}%>
-</div>
+<h2>User info</h2>
+<table>
+  <tr>
+    <th>
+      User
+    </th>
+    <th>
+      Birthday
+    </th>
+    <th>
+      Sun sign
+    </th>
+    <th>
+      Moon sign
+    </th>
+    <th>
+      Rising sign
+    </th>
+  </tr>
+  <%for(i in users){%>
+  <tr>
+  <th>
+    <%= i %>
+  </th>
+  <th>
+    <%=users[i].birthday%>
+  </th>
+  <th>
+    <%=users[i].sunSign%>
+  </th>
+  <th>
+    <%=users[i].moonSign%>
+  </th>
+  <th>
+    <%=users[i].risingSign%>
+  </th>
+  </tr>
+  <%}%>
+</table>
 
 <%- include('partials/footer') -%>
