@@ -120,6 +120,7 @@ app.get('/readings', function(request, response) {
 
 app.get('/user/:userName', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
+  let readings = JSON.parse(fs.readFileSync('data/readings.json'));
 
   // using dynamic routes to specify resource request information
   let userName = request.params.userName;
@@ -132,7 +133,8 @@ app.get('/user/:userName', function(request, response) {
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.render("userDetails",{
-      user: users[userName]
+      user: users[userName],
+      readings: readings[userName].card
     });
 
   }else{
