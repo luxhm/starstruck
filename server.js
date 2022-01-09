@@ -97,30 +97,24 @@ app.post('/tarot', function(request, response) {
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.redirect("readings");
-  }else{
-    response.status(400);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("error", {
-      "errorCode":"400"
-    });
   }
 });
 
 
 app.get('/readings', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
-  let tarot = JSON.parse(fs.readFileSync('data/tarotCards.json'));
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
 
-  let userArray = [];
-  for(name in users){
-    userArray.push(users[name]);
+  let readingsArray = [];
+  for(name in readings){
+    readingsArray.push(readings[name]);
   }
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("readings",{
-    users: userArray
+    users: users,
+    readings: readingsArray
   });
 });
 
