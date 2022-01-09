@@ -34,7 +34,7 @@ app.post('/', function(request, response) {
   if(userName&&userBday&&userSun&&userMoon&&userRising){
     let users = JSON.parse(fs.readFileSync('data/users.json'));
     let newUser ={
-      "name": userName,
+      "name": userName.trim(""),
       "birthday": userBday,
       "sunSign": userSun,
       "moonSign": userMoon,
@@ -129,13 +129,13 @@ app.get('/user/:userName', function(request, response) {
   let userMoon = request.params.userMoon;
   let userRising = request.params.userRising;
 
-  if(users[userName]){
+ if(users[userName]){
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.render("userDetails",{
       user: users[userName],
       readings: readings[userName].card
-    });
+   });
 
   }else{
     response.status(404);
