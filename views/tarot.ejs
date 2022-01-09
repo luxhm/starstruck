@@ -101,8 +101,13 @@
     <option value="<%= i %>"><%= i %></option>
     <% } %>
   </select>
-  <label for="birthday">Birthday (mm/dd/yyyy):</label>
-  <input type="text" id="birthday" name="userBday" value=""><br>
+  <br>
+  <label for="card">Card drawn:</label>
+  <select name="card" id="card">
+    <%for(i in tarotCards){%>
+    <option value="<%= i %>"><%= i %></option>
+    <% } %>
+  </select>
   <br><br>
   <input type="submit" value="Claim this future">
 
