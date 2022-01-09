@@ -18,23 +18,30 @@
     <th>
       Rising sign
     </th>
+    <th>
+      Card drawn
+    </th>
   </tr>
-  <%for(let i =0; i<users.length; i++){%>
+  <%for(let i =0; i<readings.length; i++){%>
+    <% console.log(readings[i].name) %>
   <tr>
   <th>
-    <a href="/user/<%=users[i].name%>"><%=users[i].name%></a>
+    <a href="/user/<%=users[readings[i].name].name%>"><%=users[readings[i].name].name%></a>
   </th>
   <th>
-    <%=users[i].birthday%>
+    <%=users[readings[i].name].birthday%>
   </th>
   <th>
-    <%=users[i].sunSign%>
+    <%=users[readings[i].name].sunSign%>
   </th>
   <th>
-    <%=users[i].moonSign%>
+    <%=users[readings[i].name].moonSign%>
   </th>
   <th>
-    <%=users[i].risingSign%>
+    <%=users[readings[i].name].risingSign%>
+  </th>
+  <th>
+    <%=readings[i].card%>
   </th>
   </tr>
   <%}%>

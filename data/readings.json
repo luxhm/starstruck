@@ -1,1 +1,14 @@
-{"Lux":{"name":"Lux","card":"The Moon"}}
+{
+  "Lux": {
+    "name": "Lux",
+    "card": "The Hermit"
+  },
+  "Nathalie": {
+    "name": "Nathalie",
+    "card": "The Moon"
+  },
+  "Mr. Gohde": {
+    "name": "Mr. Gohde",
+    "card": "The Hierophant"
+  }
+}
