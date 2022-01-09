@@ -104,6 +104,7 @@ app.post('/tarot', function(request, response) {
 app.get('/readings', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
+  let tarots = JSON.parse(fs.readFileSync('data/tarotCards.json'));
 
   let readingsArray = [];
   for(name in readings){
@@ -114,6 +115,7 @@ app.get('/readings', function(request, response) {
   response.setHeader('Content-Type', 'text/html')
   response.render("readings",{
     users: users,
+    tarots: tarots,
     readings: readingsArray
   });
 });

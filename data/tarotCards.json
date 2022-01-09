@@ -5,7 +5,7 @@
     "Keywords": ["Deception", "Difficult period", "Fear", "Hidden things","Insecurity", "Mental confusion"],
     "Element": "Water",
     "Sign": "Pisces",
-    "Positivity": "15"
+    "Positivity": 15
   },
 
   "The Emperor": {
@@ -14,7 +14,7 @@
     "Keywords": ["Authority", "Father figure", "Law and order", "Leadership","Power", "Promotion"],
     "Element": "Fire",
     "Sign": "Aries",
-    "Positivity": "70"
+    "Positivity": 70
   },
 
   "The Hierophant": {
@@ -23,7 +23,7 @@
     "Keywords": ["Education", "Learning", "Marriage", "Seeking advice","Spirtual guidance", "Tradition"],
     "Element": "Earth",
     "Sign": "Taurus",
-    "Positivity": "85"
+    "Positivity": 85
   },
 
   "The Lovers": {
@@ -32,7 +32,7 @@
     "Keywords": ["Crossroads", "Choices", "Commitment", "Falling in love","Partnerships"],
     "Element": "Air",
     "Sign": "Gemini",
-    "Positivity": "60"
+    "Positivity": 60
   },
 
   "The Chariot": {
@@ -41,7 +41,7 @@
     "Keywords": ["A journey", "Ambition", "Confidence", "Drive", "Overcoming obstacles", "Will power"],
     "Element": "Water",
     "Sign": "Cancer",
-    "Positivity": "90"
+    "Positivity": 90
   },
 
   "Strength": {
@@ -50,7 +50,7 @@
     "Keywords": ["Confidence", "Enjoying power,", "Inner strength", "Potency","Self-belief", "Virility", "Vitality"],
     "Element": "Fire",
     "Sign": "Leo",
-    "Positivity": "85"
+    "Positivity": 85
   },
 
   "The Hermit": {
@@ -59,7 +59,7 @@
     "Keywords": ["Introspection", "Meditation", "Self-reflection", "Solitude","Soul-searching", "Withdrawn from society"],
     "Element": "Earth",
     "Sign": "Virgo",
-    "Positivity": "70"
+    "Positivity": 70
   },
 
   "Justice": {
@@ -68,7 +68,7 @@
     "Keywords": ["Balance", "Equilibrium", "Cause and effect", "Fairness", "Justice","Responsibility"],
     "Element": "Air",
     "Sign": "Libra",
-    "Positivity": "80"
+    "Positivity": 80
   },
 
   "Death": {
@@ -77,7 +77,7 @@
     "Keywords": ["Endings", "Failure", "Letting go", "Mortality","Profound change", "Severe illness"],
     "Element": "Water",
     "Sign": "Scorpio",
-    "Positivity": "10"
+    "Positivity": 10
   },
 
   "Temperance": {
@@ -86,7 +86,7 @@
     "Keywords": ["Alchemy", "Balance", "Connecting with your guides", "Harmony","Searching for divine intervention", "Moderation"],
     "Element": "Fire",
     "Sign": "Sagittarius",
-    "Positivity": "70"
+    "Positivity": 70
   },
 
   "The Devil": {
@@ -95,7 +95,7 @@
     "Keywords": ["Bondage", "Fear", "Feeling trapped", "Materialism","Temptation", "Unhealthy relationships"],
     "Element": "Earth",
     "Sign": "Capricorn",
-    "Positivity": "2"
+    "Positivity": 2
   },
 
   "The Star": {
@@ -104,7 +104,7 @@
     "Keywords": ["Astronomy", "Good health", "Hope", "Inspiration","Opportunities", "Spirtuality"],
     "Element": "Air",
     "Sign": "Aquarius",
-    "Positivity": "100"
+    "Positivity": 100
   }
 
 }

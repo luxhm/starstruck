@@ -21,9 +21,18 @@
     <th>
       Card drawn
     </th>
+    <th>
+      Card positivity
+    </th>
   </tr>
   <%for(let i =0; i<readings.length; i++){%>
-    <% console.log(readings[i].name) %>
+    <% let totalPositivity = 0; %>
+    <% console.log(readings[i].card.length) %>
+    <% for(let i =0; i<readings[i].card.length-1; i++){%>
+      <% console.log(readings[i].card.length) %>
+      <% totalPositivity += tarots[readings[i].card[i]].Positivity %>
+    <% } %>
+    <% console.log(totalPositivity) %>
   <tr>
   <th>
     <a href="/user/<%=users[readings[i].name].name%>"><%=users[readings[i].name].name%></a>
@@ -42,6 +51,9 @@
   </th>
   <th>
     <%=readings[i].card%>
+  </th>
+  <th>
+    <%=tarots[readings[i].card[0]].Positivity%>
   </th>
   </tr>
   <%}%>
