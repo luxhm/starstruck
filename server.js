@@ -77,28 +77,35 @@ app.get('/tarot', function(request, response) {
 
 
 app.post('/tarot', function(request, response) {
-
   let name = request.body.name;
   let card = request.body.card;
 
   if(name&&card){
     let readings = JSON.parse(fs.readFileSync('data/readings.json'));
-    let newReading ={
+    let newReading = {
       "name": name,
-      "card": card,
+      "card": card
     }
     readings[name] = newReading;
 
     fs.writeFileSync('data/readings.json', JSON.stringify(readings));
+
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.redirect("readings");
+  }else{
+    response.status(400);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("error", {
+      "errorCode":"400"
+    });
   }
- });
+});
 
 
 app.get('/readings', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
+
   let userArray = [];
   for(name in users){
     userArray.push(users[name]);
