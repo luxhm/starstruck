@@ -96,7 +96,11 @@
 
 <form action="/tarot" method="POST">
   <label for="name">Name:</label>
-  <input type="text" id="name" name="userName" value=""><br>
+  <select name="name" id="name">
+    <%for(i in users){%>
+    <option value="<%= i %>"><%= i %></option>
+    <% } %>
+  </select>
   <label for="birthday">Birthday (mm/dd/yyyy):</label>
   <input type="text" id="birthday" name="userBday" value=""><br>
   <br><br>
