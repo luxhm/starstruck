@@ -77,41 +77,35 @@ app.get('/tarot', function(request, response) {
 
 
 app.post('/tarot', function(request, response) {
-  /*
-  let userName = request.body.userName;
-  let userBday = request.body.userBday;
-  let userSun = request.body.userSun;
-  let userMoon = request.body.userMoon;
-  let userRising = request.body.userRising;
+  let name = request.body.name;
+  let card = request.body.card;
 
-  if(userName&&userBday&&userSun&&userMoon&&userRising){
-    let users = JSON.parse(fs.readFileSync('data/users.json'));
-    let newUser ={
-      "name": userName,
-      "birthday": userBday,
-      "sunSign": userSun,
-      "moonSign": userMoon,
-      "risingSign": userRising,
+  if(name&&card){
+    let readings = JSON.parse(fs.readFileSync('data/readings.json'));
+    let newReading = {
+      "name": name,
+      "card": card
     }
-    users[userName] = newUser;
+    readings[name] = newReading;
 
-    fs.writeFileSync('data/users.json', JSON.stringify(users));
-*/
+    fs.writeFileSync('data/readings.json', JSON.stringify(readings));
+
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.redirect("readings");
-  /*}else{
+  }else{
     response.status(400);
     response.setHeader('Content-Type', 'text/html')
     response.render("error", {
       "errorCode":"400"
     });
-  }*/
+  }
 });
 
 
 app.get('/readings', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
+
   let userArray = [];
   for(name in users){
     userArray.push(users[name]);
