@@ -14,6 +14,7 @@ app.set('views', __dirname + '/views'); //specify location of templates
 app.set('view engine', 'ejs'); //specify templating library
 
 let cardArray = [];
+let randomCard;
 
 //.............Define server routes..............................//
 //Express checks routes in the order in which they are defined
@@ -65,8 +66,9 @@ app.get('/tarot', function(request, response) {
     }
 
     let randomNum = Math.floor(Math.random()*11)+1;
-    let randomCard = tarotArray[randomNum];
-    console.log(tarotArray[randomNum]);
+    randomCard = tarotArray[randomNum];
+    //console.log(tarotArray[randomNum]);
+    console.log(randomCard);
 
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
@@ -80,11 +82,14 @@ app.get('/tarot', function(request, response) {
 
 app.post('/tarot', function(request, response) {
   let name = request.body.name;
-  let card = request.body.card;
+  //  let card = request.body.card;
 
-  cardArray.push(card);
 
-  if(name&&card){
+    cardArray.push(randomCard);
+
+//  if(name&&card){
+    if(name){
+    console.log("test");
     let readings = JSON.parse(fs.readFileSync('data/readings.json'));
     let newReading = {
       "name": name,

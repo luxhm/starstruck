@@ -6,21 +6,14 @@
 <br>
 
 <form action="/tarot" method="POST">
-  <label for="name">Name:</label>
+  <label for="name"> I, </label>
   <select name="name" id="name">
     <%for(i in users){%>
     <option value="<%= i %>"><%= i %></option>
     <% } %>
   </select>
-  <br>
-  <label for="card">Card drawn:</label>
-  <select name="card" id="card">
-    <%for(i in tarotCards){%>
-    <option value="<%= i %>"><%= i %></option>
-    <% } %>
-  </select>
-  <br><br>
-  <input type="submit" value="Claim this future">
+  <body> hereby and forever more choose to</body>
+  <input type="submit" value="claim this future.">
 
 </form>
 <br>
