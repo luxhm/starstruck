@@ -86,7 +86,7 @@ app.post('/tarot', function(request, response) {
 
 
     cardArray.push(randomCard);
-
+    console.log(randomCard)
 //  if(name&&card){
     if(name){
     console.log("test");
