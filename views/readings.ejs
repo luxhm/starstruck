@@ -29,12 +29,10 @@
 
     <% let totalPositivity = 0; %>
     <% let numberOfCards = 0; %>
-    <% console.log(readings[i].card) %>
     <% readings[i].card.forEach(function(currentValue, index){ %>
     <% totalPositivity += tarots[currentValue].Positivity; %>
     <% numberOfCards += 1; %>
     <% }) %>
-    <% console.log(totalPositivity/numberOfCards) %>
   <tr>
   <th>
     <a href="/user/<%=users[readings[i].name].name%>"><%=users[readings[i].name].name%></a>
