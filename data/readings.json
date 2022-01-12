@@ -1,1 +1,28 @@
-{"Lux":{"name":"Lux","card":["The Star","The Devil","The Star"]},"Mr. Gohde":{"name":"Mr. Gohde","card":["The Star"]},"ms":{"name":"ms","card":["The Devil"]},"erin":{"name":"erin","card":["The Star"]}}
+{
+  "Lux": {
+    "name": "Lux",
+    "card": [
+      "The Star",
+      "The Devil",
+      "The Star"
+    ]
+  },
+  "Mr. Gohde": {
+    "name": "Mr. Gohde",
+    "card": [
+      "The Star"
+    ]
+  },
+  "ms": {
+    "name": "ms",
+    "card": [
+      "The Devil"
+    ]
+  },
+  "erin": {
+    "name": "erin",
+    "card": [
+      "The Star"
+    ]
+  }
+}
