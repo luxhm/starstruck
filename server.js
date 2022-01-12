@@ -13,7 +13,6 @@ app.use(express.static('public')); //specify location of static assests
 app.set('views', __dirname + '/views'); //specify location of templates
 app.set('view engine', 'ejs'); //specify templating library
 
-let cardArray = [];
 let randomCard;
 
 //.............Define server routes..............................//
@@ -82,27 +81,27 @@ app.get('/tarot', function(request, response) {
 
 app.post('/tarot', function(request, response) {
   let name = request.body.name;
-  //  let card = request.body.card;
+  let readings = JSON.parse(fs.readFileSync('data/readings.json'));
 
+  if (name in readings) {
+    readings[name].card.push(randomCard);
+    console.log(readings[name].card);
+    fs.writeFileSync('data/readings.json', JSON.stringify(readings));
 
-    cardArray.push(randomCard);
-    console.log(randomCard)
-//  if(name&&card){
-    if(name){
-    console.log("test");
-    let readings = JSON.parse(fs.readFileSync('data/readings.json'));
+  }
+  else {
     let newReading = {
       "name": name,
-      "card": cardArray
+      "card": [randomCard]
     }
     readings[name] = newReading;
-
     fs.writeFileSync('data/readings.json', JSON.stringify(readings));
+
+  }
 
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.redirect("readings");
-  }
 });
 
 
