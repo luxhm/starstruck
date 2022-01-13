@@ -14,6 +14,11 @@ h1 {
   font-family: crayonnette;
 }
 
+h2 {
+  font-family: bondi;
+  font-size: 30px;
+}
+
 nav{
   font-size: 20px;
   text-align: center;
@@ -49,13 +54,13 @@ table {
   border-collapse: collapse;
   background-color: #003366;
   margin: auto;
-  width: 50%;
+  width: 80%;
   color: #BBC2CC;
 }
 
 table, th, td {
   border: 0px;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -75,19 +80,25 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 20px;
 }
 
 footer {
   font-size: 50%;
   text-align: center;
-  border-top: 3px solid #BDABBE;
 }
 
-form{
+form {
   padding: 20px;
 }
 
 @font-face {
     font-family: 'crayonnette';
     src: url('/images/Crayonnette.ttf');
+}
+
+select, input {
+  font-weight: bold;
+  color: #260047;
+  background-color: #BDABBE;
 }
