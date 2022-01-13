@@ -1,5 +1,5 @@
 body {
-  background-color: #003366;
+  background-color: #F1EEE6;
   font-size: 18px;
   color: #C0C0C0;
   font-family: 'Optima', sans-serif;
@@ -7,32 +7,35 @@ body {
 
 h1 {
   margin-top: 25px;
-  background-color: #003366;
   font-size: 75px;
   text-align: center;
-  color:#BBC2CC;
+  color:#9757B0;
   font-family: crayonnette;
 }
 
 h2 {
+  text-align: center;
   font-family: crayonnette;
   font-size: 30px;
-}
 
-nav{
-  font-size: 20px;
-  text-align: center;
-  color:#C0C0C0;
-  border-top: 1.5px solid #BDABBE;
-  border-bottom: 1.5px solid #BDABBE;
 }
 
 div {
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: #260047;
+  background-color: #F1EEE6;
   overflow: auto;
 }
+
+nav{
+  color: #BDABBE;
+  font-size: 18px;
+  text-align: center;
+  border-top: 1.5px solid #BDABBE;
+  border-bottom: 1.5px solid #BDABBE;
+}
+
+
 
 button {
   background-color: #faf9cd;
@@ -95,6 +98,12 @@ form {
 @font-face {
     font-family: 'crayonnette';
     src: url('/images/Crayonnette.ttf');
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 48%;
+    transform: translatex(-50%);
 }
 
 select, input {
