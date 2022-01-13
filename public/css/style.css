@@ -54,7 +54,8 @@ nav{
 
 #claim{
   float:left;
-  margin-left: 50px;
+  margin-left: 20px;
+  width: 50%
 }
 
 button {
@@ -107,7 +108,7 @@ img {
 }
 
 footer {
-  font-size: 50%;
+  font-size: 75%;
   text-align: center;
 }
 
