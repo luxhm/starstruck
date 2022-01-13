@@ -1,10 +1,15 @@
 <%- include('partials/header', {title:"Drawing Tarot Cards"}) -%>
 <h2><%= randomCard %> Tarot Card Drawn!</h2>
    <img id="tarotimg" src = "<%=tarotCards[randomCard].Photo%>" height="400">
+   <div id = "tarotBoxes">
    <p> Meaning of <%= randomCard %>: <%=tarotCards[randomCard].Meaning%></p>
+   </div>
+   <div id = "tarotBoxes">
    <p> Keywords: <%=tarotCards[randomCard].Keywords%></p>
+   </div>
 <br>
 
+<div id="claim">
 <form action="/tarot" method="POST">
   <label for="name"> I, </label>
   <select name="name" id="name">
@@ -16,6 +21,7 @@
   <input type="submit" value="claim this future.">
 
 </form>
+</div>
 <br>
 
 <%- include('partials/footer') -%>

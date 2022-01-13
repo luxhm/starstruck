@@ -35,7 +35,27 @@ nav{
   border-bottom: 1.5px solid #BDABBE;
 }
 
+#tarotBoxes{
+  padding: 7px;
+  background-color: #66518a;
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 50%;
+  float: left;
 
+}
+
+#tarotimg {
+  margin-left: 150px;
+  float: left;
+}
+
+#claim{
+  float:left;
+  margin-left: 50px;
+}
 
 button {
   background-color: #faf9cd;
@@ -55,7 +75,7 @@ button:focus {
 
 table {
   border-collapse: collapse;
-  background-color: #003366;
+  background-color: #66518a;
   margin: auto;
   width: 80%;
   color: #BBC2CC;
@@ -93,6 +113,7 @@ footer {
 
 form {
   padding: 20px;
+  margin-left: 10px;
 }
 
 @font-face {
@@ -110,4 +131,8 @@ select, input {
   font-weight: bold;
   color: #260047;
   background-color: #BDABBE;
+  border-radius: 6px;
+  width: 30%;
+  text-align: center;
+  margin-top: 10px;
 }

@@ -1,9 +1,1 @@
-{
-  "Nerea": {
-    "name": "Nerea",
-    "birthday": "2003-11-21",
-    "sunSign": "Scorpio",
-    "moonSign": "Libra",
-    "risingSign": "Aries"
-  }
-}
+{"Nerea":{"name":"Nerea","birthday":"2003-11-21","sunSign":"Scorpio","moonSign":"Libra","risingSign":"Aries"},"Kate":{"name":"Kate","birthday":"2003-12-08","sunSign":"Sagittarius","moonSign":"Aries","risingSign":"Pisces"}}
