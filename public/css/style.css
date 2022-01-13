@@ -25,6 +25,8 @@ div {
   margin-bottom: 5px;
   background-color: #F1EEE6;
   overflow: auto;
+  border-radius: 10px;
+
 }
 
 nav{
@@ -80,6 +82,7 @@ table {
   margin: auto;
   width: 80%;
   color: #BBC2CC;
+  border-radius: 10px;
 }
 
 table, th, td {
@@ -110,6 +113,10 @@ img {
 footer {
   font-size: 75%;
   text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 45%;
+
 }
 
 form {
