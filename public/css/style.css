@@ -6,16 +6,20 @@ body {
 }
 
 h1 {
+  margin-top: 25px;
   background-color: #003366;
   font-size: 75px;
   text-align: center;
-  color:#BBC2CC
+  color:#BBC2CC;
+  font-family: crayonnette;
 }
 
 nav{
   font-size: 20px;
   text-align: center;
   color:#C0C0C0;
+  border-top: 1.5px solid #BDABBE;
+  border-bottom: 1.5px solid #BDABBE;
 }
 
 div {
@@ -81,4 +85,9 @@ footer {
 
 form{
   padding: 20px;
+}
+
+@font-face {
+    font-family: 'crayonnette';
+    src: url('/images/Crayonnette.ttf');
 }
