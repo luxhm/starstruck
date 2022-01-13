@@ -14,6 +14,9 @@ h1 {
 }
 
 h2 {
+  margin-top: 20px;
+  margin-top: 20px;
+
   text-align: center;
   font-family: crayonnette;
   font-size: 30px;
@@ -126,6 +129,11 @@ form {
     position: absolute;
     left: 48%;
     transform: translatex(-50%);
+}
+
+.nav-link{
+  margin-left: 40px;
+  text-align: center;
 }
 
 select, input {
