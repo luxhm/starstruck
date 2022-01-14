@@ -24,6 +24,9 @@
     <th>
       Positivity of readings
     </th>
+    <th>
+      Emotional outlook
+    </th>
   </tr>
   <%for(let i =0; i<readings.length; i++){%>
 
@@ -51,6 +54,9 @@
   </th>
   <th>
     <%=readings[i].card%>
+  </th>
+  <th>
+    <%=readings[i].emotion%>
   </th>
   <th>
     <%=Math.round(totalPositivity/numberOfCards)%>

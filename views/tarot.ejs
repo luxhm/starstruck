@@ -11,6 +11,17 @@
 
 <div id="claim">
 <form action="/tarot" method="POST">
+  <body>How do you feel about your fortune? </body>
+  <label for="emotion"> </label>
+  <select name="emotion" id="emotion">
+    <option value="excitement">Excitement</option>
+    <option value="joy">Joy</option>
+    <option value="fear">Fear</option>
+    <option value="depression">Depression</option>
+    <option value="anxiety">Anxiety</option>
+    <option value="goddess-like">Goddess-like</option>
+  </select>
+  <br>
   <label for="name"> I, </label>
   <select name="name" id="name">
     <%for(i in users){%>

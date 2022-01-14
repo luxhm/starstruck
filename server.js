@@ -82,18 +82,19 @@ app.get('/tarot', function(request, response) {
 app.post('/tarot', function(request, response) {
   let name = request.body.name;
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
+  let emotions = JSON.parse(fs.readFileSync('data/readings.json'));
 
   if (name){ //change this to another property than name
     if (name in readings) {
       readings[name].card.push(randomCard);
-      console.log(readings[name].card);
+      readings[name].emotion.push(request.body.emotion);
       fs.writeFileSync('data/readings.json', JSON.stringify(readings));
-
     }
     else {
       let newReading = {
         "name": name,
-        "card": [randomCard]
+        "card": [randomCard],
+        "emotion": [request.body.emotion]
       }
       readings[name] = newReading;
       fs.writeFileSync('data/readings.json', JSON.stringify(readings));
