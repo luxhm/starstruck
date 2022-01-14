@@ -58,6 +58,17 @@ nav{
   float: left;
 }
 
+#allImages{
+  float: left;
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+
+#userDetailsTarot{
+  float: left;
+  margin-left: 30px;
+}
+
 #claim{
   border: 1px dashed #9757B0;
   border-radius: 20px;

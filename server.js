@@ -136,6 +136,7 @@ app.get('/readings', function(request, response) {
 app.get('/user/:userName', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
+  let tarotArray = JSON.parse(fs.readFileSync('data/tarotCards.json'));
 
   // using dynamic routes to specify resource request information
   let userName = request.params.userName;
@@ -149,7 +150,8 @@ app.get('/user/:userName', function(request, response) {
     response.setHeader('Content-Type', 'text/html')
     response.render("userDetails",{
       user: users[userName],
-      readings: readings[userName].card
+      readings: readings[userName].card,
+      tarotArray: tarotArray
    });
 
   }else{
