@@ -1,38 +1,3 @@
 {
-  "Nerea": {
-    "name": "Nerea",
-    "sign": "Scorpio",
-    "card": [
-      "The Chariot"
-    ],
-    "emotion": [
-      "excitement"
-    ]
-  },
-  "rude": {
-    "name": "rude",
-    "sign": "Taurus",
-    "card": [
-      "The Emperor",
-      "The Hierophant",
-      "Justice",
-      "The Lovers"
-    ],
-    "emotion": [
-      "anxiety",
-      "excitement",
-      "depression",
-      "fear"
-    ]
-  },
-  "hennry": {
-    "name": "hennry",
-    "sign": "Gemini",
-    "card": [
-      "The Chariot"
-    ],
-    "emotion": [
-      "depression"
-    ]
-  }
+
 }
