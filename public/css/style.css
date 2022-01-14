@@ -42,8 +42,9 @@ nav{
 
 #tarotBoxes{
   padding: 7px;
-  background-color: #66518a;
   margin-left: 50px;
+  background-color: #66518a;
+  color: #F1EEE6;
   margin-right: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -58,8 +59,10 @@ nav{
 }
 
 #claim{
+  border: 1px dashed #9757B0;
+  border-radius: 20px;
   float:left;
-  margin-left: 20px;
+  margin-left: 50px;
   width: 50%
 }
 
@@ -81,7 +84,7 @@ button:focus {
 
 table {
   border-collapse: collapse;
-  background-color: #66518a;
+  background-color: #F1EEE6;
   margin: auto;
   width: 80%;
   color: #BBC2CC;
@@ -91,6 +94,8 @@ table {
 table, th, td {
   border: 0px;
   padding: 20px;
+  border: 1px dashed #9757B0;
+  border-radius: 20px;
   text-align: center;
 }
 

@@ -43,13 +43,13 @@
     <%=readings[i].sign%>
   </th>
   <th>
-    <%=readings[i].card%>
+    <%=readings[i].card.join(" & ")%>
   </th>
   <th>
     <%=Math.round(totalPositivity/numberOfCards)-posAdjustment%>
   </th>
   <th>
-    <%=readings[i].emotion%>
+    <%=readings[i].emotion.join(" & ")%>
   </th>
   </tr>
   <%}%>
