@@ -4,19 +4,10 @@
 <table>
   <tr>
     <th>
-      User
-    </th>
-    <th>
-      Birthday
+      Name
     </th>
     <th>
       Sun sign
-    </th>
-    <th>
-      Moon sign
-    </th>
-    <th>
-      Rising sign
     </th>
     <th>
       Card drawn
@@ -36,30 +27,29 @@
     <% totalPositivity += tarots[currentValue].Positivity; %>
     <% numberOfCards += 1; %>
     <% }) %>
+    <% let posAdjustment; %>
+    <% if (readings[i].sign == "Taurus" && totalPositivity/numberOfCards > 20){ %>
+      <% posAdjustment = 20; %>
+    <% }else { %>
+      <% posAdjustment = 0; %>
+    <% } %>
+
+
   <tr>
   <th>
     <a href="/user/<%=users[readings[i].name].name%>"><%=users[readings[i].name].name%></a>
   </th>
   <th>
-    <%=users[readings[i].name].birthday%>
-  </th>
-  <th>
-    <%=users[readings[i].name].sunSign%>
-  </th>
-  <th>
-    <%=users[readings[i].name].moonSign%>
-  </th>
-  <th>
-    <%=users[readings[i].name].risingSign%>
+    <%=readings[i].sign%>
   </th>
   <th>
     <%=readings[i].card%>
   </th>
   <th>
-    <%=readings[i].emotion%>
+    <%=Math.round(totalPositivity/numberOfCards)-posAdjustment%>
   </th>
   <th>
-    <%=Math.round(totalPositivity/numberOfCards)%>
+    <%=readings[i].emotion%>
   </th>
   </tr>
   <%}%>
