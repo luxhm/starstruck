@@ -31,7 +31,7 @@ app.post('/', function(request, response) {
   let userMoon = request.body.userMoon;
   let userRising = request.body.userRising;
 
-  if(userName&&userBday&&userSun&&userMoon&&userRising){
+  if(userName&&userBday){
     let users = JSON.parse(fs.readFileSync('data/users.json'));
     let newUser ={
       "name": userName.trim(""),
@@ -82,8 +82,6 @@ app.post('/tarot', function(request, response) {
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
   let emotions = JSON.parse(fs.readFileSync('data/readings.json'));
   let users = JSON.parse(fs.readFileSync('data/users.json'));
-
-  if (name){ //change this to another property than name
     if (name in readings) {
       readings[name].card.push(randomCard);
       readings[name].emotion.push(request.body.emotion);
@@ -103,14 +101,7 @@ app.post('/tarot', function(request, response) {
       response.status(200);
       response.setHeader('Content-Type', 'text/html')
       response.redirect("readings");
-  }
-  else {
-    response.status(400);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("error", {
-      "errorCode":"400"
-    });
-  }
+
 });
 
 

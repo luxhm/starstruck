@@ -40,24 +40,6 @@ nav{
   border-bottom: 1.5px solid #BDABBE;
 }
 
-#tarotBoxes{
-  padding: 7px;
-  margin-left: 50px;
-  background-color: #66518a;
-  color: #F1EEE6;
-  margin-right: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 50%;
-  float: left;
-
-}
-
-#tarotimg {
-  margin-left: 150px;
-  float: left;
-}
-
 #allImages{
   float: left;
   margin-left: 120px;
@@ -69,12 +51,33 @@ nav{
   margin-left: 30px;
 }
 
+#tarotBoxes{
+  padding: 7px;
+  margin-left: 50px;
+  background-color: #66518a;
+  color: #F1EEE6;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 50%;
+  float: left;
+}
+
+#tarotimg {
+  margin-left: 150px;
+  float: left;
+}
+
 #claim{
   border: 1px dashed #9757B0;
   border-radius: 20px;
   float:left;
   margin-left: 50px;
   width: 50%
+}
+
+#tarotDiv{
+  margin: center;
 }
 
 button {
