@@ -2,7 +2,7 @@ body {
   background-color: #F1EEE6;
   font-size: 18px;
   color: #C0C0C0;
-  font-family: 'Optima', sans-serif;
+  font-family: 'optima', sans-serif;
 }
 
 h1 {
@@ -146,6 +146,11 @@ form {
 @font-face {
     font-family: 'crayonnette';
     src: url('/images/Crayonnette.ttf');
+}
+
+@font-face {
+    font-family: 'luxurious';
+    src: url('/images/LuxuriousRoman-Regular.ttf');
 }
 
 .navbar-nav.navbar-center {
