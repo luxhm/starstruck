@@ -2,6 +2,8 @@
 
 <h2>Tell us a little about yourself!</h2>
 
+<div id = zodiacInfo>
+<div id = zodiacForm>
 <form action="/" method="POST">
   <label for="name">Name:</label>
   <input type="text" id="name" name="userName" value=""><br>
@@ -58,8 +60,14 @@
   </select>
   <br><br>
   <input type="submit" value="Create a new user!">
-
 </form>
+</div>
+
+  <div id = astrologyChart>
+    <img src = "images/chart.png" height="500">
+  </div>
+
+</div>
 <br>
 
 <%- include('partials/footer') -%>
