@@ -1,6 +1,14 @@
 <%- include('partials/header', {title:"User Details"}) -%>
 
 <h2><%=user.name%></h2>
+<div id = "allImages">
+  <% let readings = %><%=readings.card%><%;%>
+  <%for(let card in readings){ %>
+    <img id="userDetailsTarot" src = "<%=tarotArray[card].Photo%>" height="200">
+  <% } %>
+  <br>
+  <br>
+</div>
 
 <table>
   <tr>
@@ -52,6 +60,7 @@
     </td>
   </tr>
 </table>
+<br>
 <br>
 
 <%- include('partials/footer') -%>
