@@ -77,7 +77,7 @@ nav{
 }
 
 #tarotDiv{
-  margin: center;
+  align-items: center;
 }
 
 button {
@@ -169,19 +169,26 @@ select, input {
   color: #260047;
   background-color: #BDABBE;
   border-radius: 6px;
-  width: 30%;
+  width: 65%;
   text-align: center;
   margin-top: 10px;
 }
 
-#zodiacForm{
-  float: left;
+#emotion, #name {
+  width: 35%;
 }
+
+#zodiacForm{
+  width: 100%;
+  margin-right: 100px;
+  border: 1px dashed #9757B0;
+}
+
 #astrologyChart{
-  float: right;
+  margin-left: 100px;
 }
 
 #zodiacInfo{
- margin-left: 15%;
- margin-right: 15%;
+  display: flex;
+  align-items: center;
 }
