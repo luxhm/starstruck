@@ -132,12 +132,21 @@ app.get('/readings', function(request, response) {
 app.get('/loadManifestations', function(request, response){
   let name = request.query.name;
   let manifest = request.query.manifest;
+  if(name&&manifest){
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("loadManifestations",{
     name: name,
     manifest: manifest
   });
+  }
+  else {
+    response.status(400);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("error", {
+      "errorCode":"400"
+    });
+  }
 });
 
 app.get('/manifest', function(request, response) {
