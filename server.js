@@ -129,6 +129,13 @@ app.get('/readings', function(request, response) {
   });
 });
 
+app.get('/manifest', function(request, response)){
+  let name = request.query.name;
+  let manifest = request.query.manifest;
+
+  
+});
+
 app.get('/user/:userName', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
