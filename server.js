@@ -75,6 +75,7 @@ app.get('/tarot', function(request, response) {
       tarotCards: tarotCards,
       randomCard: randomCard
     });
+
 });
 
 
