@@ -23,12 +23,14 @@ app.get('/', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("index");
+});
 
-  let userName = request.query.userName;
-  let userBday = request.query.userBday;
-  let userSun = request.query.userSun;
-    let userMoon = request.query.userMoon;
-  let userRising = request.query.userRising;
+app.post('/', function(request, response) {
+  let userName = request.body.userName;
+  let userBday = request.body.userBday;
+  let userSun = request.body.userSun;
+  let userMoon = request.body.userMoon;
+  let userRising = request.body.userRising;
 
   if(userName&&userBday){
     let users = JSON.parse(fs.readFileSync('data/users.json'));
@@ -81,6 +83,7 @@ app.post('/tarot', function(request, response) {
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
   let emotions = JSON.parse(fs.readFileSync('data/readings.json'));
   let users = JSON.parse(fs.readFileSync('data/users.json'));
+
     if (name in readings) {
       readings[name].card.push(randomCard);
       readings[name].emotion.push(request.body.emotion);
@@ -109,9 +112,11 @@ app.get('/readings', function(request, response) {
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
   let tarots = JSON.parse(fs.readFileSync('data/tarotCards.json'));
 
+  let username = request.query.name;
+
   let readingsArray = [];
-  for(name in readings){
-    readingsArray.push(readings[name]);
+  for(username in readings){
+    readingsArray.push(readings[username]);
   }
 
   response.status(200);
