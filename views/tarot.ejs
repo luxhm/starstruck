@@ -28,10 +28,8 @@
     <option value="Goddess-like">Goddess-like</option>
   </select>
 </form>
-
-  <br>
-  <label for="name"> I, </label>
   <form action="/readings" method="GET">
+    <label for="name"> I, </label>
   <select name="username" id="name">
     <%for(i in users){%>
     <option value="<%= i %>"><%= i %></option>
