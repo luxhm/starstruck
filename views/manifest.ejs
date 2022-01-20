@@ -1,0 +1,17 @@
+<%- include('partials/header', {title:"Manifest your future!"}) -%>
+
+<h2>The cards know much, but not everything... Take agency over your future with a manifestation</h2>
+
+<div id = "manifest">
+<form action="/loadManifestations" method="GET">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" value=""><br>
+  <label for="manifest">Manifestation:</label>
+  <input type="text" id="manifest" name="manifest" value=""><br>
+  <input type="submit" value="Dream your manifestation into reality!">
+</form>
+</div>
+
+<br>
+
+<%- include('partials/footer') -%>
