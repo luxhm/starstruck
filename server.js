@@ -85,6 +85,7 @@ app.post('/tarot', function(request, response) {
   let emotions = JSON.parse(fs.readFileSync('data/readings.json'));
   let users = JSON.parse(fs.readFileSync('data/users.json'));
 
+  if (name){
     if (name in readings) {
       readings[name].card.push(randomCard);
       readings[name].emotion.push(request.body.emotion);
@@ -104,6 +105,15 @@ app.post('/tarot', function(request, response) {
       response.status(200);
       response.setHeader('Content-Type', 'text/html')
       response.redirect("readings");
+  }
+  else{
+    response.status(400);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("error", {
+      "errorCode":"400"
+    });
+  }
+
 
 });
 
@@ -112,8 +122,6 @@ app.get('/readings', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
   let tarots = JSON.parse(fs.readFileSync('data/tarotCards.json'));
-
-  //let username = request.query.name;
 
   let readingsArray = [];
   for(let name in readings){
