@@ -112,11 +112,11 @@ app.get('/readings', function(request, response) {
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
   let tarots = JSON.parse(fs.readFileSync('data/tarotCards.json'));
 
-  let username = request.query.name;
+  //let username = request.query.name;
 
   let readingsArray = [];
-  for(username in readings){
-    readingsArray.push(readings[username]);
+  for(let name in readings){
+    readingsArray.push(readings[name]);
   }
 
   response.status(200);
