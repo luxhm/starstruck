@@ -129,9 +129,15 @@ app.get('/readings', function(request, response) {
   });
 });
 
-app.get('/loadManifestation', function(request, response)){
+app.get('/loadManifestations', function(request, response){
   let name = request.query.name;
   let manifest = request.query.manifest;
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("loadManifestations",{
+    name: name,
+    manifest: manifest
+  });
 });
 
 app.get('/manifest', function(request, response) {
