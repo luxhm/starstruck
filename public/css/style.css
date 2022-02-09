@@ -40,6 +40,13 @@ nav{
   border-bottom: 1.5px solid #BDABBE;
 }
 
+button {
+  border: 1px dashed #9757B0;
+  border-radius: 20px;
+  background-color: #BDABBE;
+
+}
+
 #allImages{
   float: left;
   margin-left: 120px;
