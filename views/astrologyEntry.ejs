@@ -1,0 +1,33 @@
+<%- include('navbar') -%>
+
+<h2>Tell us a little about yourself!</h2>
+
+<div id = "zodiacInfo">
+  <img id="astrologyChart" src = "images/chart.png" height="500">
+
+<div id = "zodiacForm">
+  <form>
+  <label for="name">Name:</label>
+  <input type="text" id="userName" name="userName" value=""><br>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="userBday" value="">
+
+  <div class="md-form">
+    <input placeholder="Selected time" type="text" id="input_starttime" class="form-control timepicker">
+    <label for="input_starttime">Light version, 12hours</label>
+  </div>
+
+  <br>
+  <label for="birthPlace">Place of Birth:</label>
+  <input type="text" id="place" name="place" value=""><br>
+
+  <br>
+
+</form>
+</div>
+</div>
+
+</div>
+<br>
+
+<%- include('partials/footer') -%>
