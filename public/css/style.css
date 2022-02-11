@@ -40,12 +40,17 @@ nav{
   border-bottom: 1.5px solid #BDABBE;
 }
 
-button {
+.connectButton {
   border: 1px dashed #9757B0;
   border-radius: 20px;
-  background-color: #BDABBE;
-
+  background-color: #F1EEE6;
+  color: #BDABBE;
+  width: 50%;
+  margin-left: 25%;
+  font-family: crayonnette;
+  font-size: 30px;
 }
+
 
 #allImages{
   float: left;
@@ -86,6 +91,18 @@ button {
 #tarotDiv{
   align-items: center;
 }
+
+#tarotBoxes2{
+  padding: 7px;
+  margin-left: 50px;
+  background-color: #BDABBE;
+  color: #F1EEE6;
+  margin-top: 3%;
+  margin-left: 25%;
+  width: 50%;
+  float: left;
+}
+
 
 button {
   background-color: #faf9cd;
@@ -176,7 +193,8 @@ select, input {
   color: #260047;
   background-color: #BDABBE;
   border-radius: 6px;
-  width: 65%;
+  width: 50%;
+  margin-left: 25%;
   text-align: center;
   margin-top: 10px;
 }
