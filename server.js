@@ -200,6 +200,12 @@ app.get('/connect', function(request, response) {
   response.render("connect");
 });
 
+app.get('/astrologyEntry', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("astrologyEntry");
+});
+
 // Because routes/middleware are applied in order,
 // this will act as a default error route in case of
 // a request fot an invalid route
