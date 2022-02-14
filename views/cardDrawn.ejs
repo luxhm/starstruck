@@ -2,12 +2,16 @@
 <%- include('partials/header', {title:"Dare to draw a card?"}) -%>
 
 <h2>You drew the ___ card!</h2>
-<h4>IMAGE OF CARD </h4>
-
+<br>
+<div id="cardDrawn">
+<h4>[IMAGE OF CARD] </h4>
+</div>
 <div id = "tarotBoxes2">
 <h4>The ___ card symbolizes ___ and is commonly associated with ___.</h4>
 <h4>As a [insert user's sign], this card suggests that ___ is in your future.</h4>
 </div>
+
+<br>
 
 <form action="/cardDrawn" method="POST">
   <input type="submit" value="VISUALIZE YOUR READING">
