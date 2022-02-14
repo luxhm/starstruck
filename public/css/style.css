@@ -52,6 +52,7 @@ button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 button:focus {
   outline: none;
 }
@@ -183,10 +184,8 @@ select, input {
   margin-left: 50px;
   background-color: #BDABBE;
   color: #F1EEE6;
-  margin-top: 3%;
   margin-left: 25%;
   width: 50%;
-  float: left;
 }
 
 #emotion, #name {
@@ -232,6 +231,16 @@ select, input {
   color:#F1EEE6;
   opacity:.5;
   float: right;
+}
+
+#cardDrawn {
+  text-align: center;
+}
+
+#visualization {
+  background-color: rgba(0,124,255,0.3);
+  color: black;
+  text-align: center;
 }
 
 /*End: astrologyEntry*/

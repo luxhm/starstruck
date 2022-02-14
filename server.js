@@ -242,6 +242,18 @@ app.post('/cardDrawn', function(request, response) {
   response.redirect("visualize");
 });
 
+app.post('/visualize', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.redirect("postVisualization");
+});
+
+app.get('/postVisualization', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("postVisualization");
+});
+
 // Because routes/middleware are applied in order,
 // this will act as a default error route in case of
 // a request fot an invalid route
