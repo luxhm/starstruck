@@ -117,8 +117,10 @@ select, input {
 
 .navbar-nav.navbar-center {
     position: absolute;
-    left: 48%;
-    transform: translatex(-50%);
+    text-align: center;
+    /*margin-left: 10%;
+    width: 100%;
+    transform: translatex(-50%);*/
 }
 
 .nav-link{
