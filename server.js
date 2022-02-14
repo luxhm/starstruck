@@ -200,10 +200,40 @@ app.get('/connect', function(request, response) {
   response.render("connect");
 });
 
+app.get('/drawCard', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("drawCard");
+});
+
+app.get('/cardDrawn', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("cardDrawn");
+});
+
+app.get('/visualize', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("visualize");
+});
+
 app.get('/astrologyEntry', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("astrologyEntry");
+});
+
+app.post('/drawCard', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.redirect("cardDrawn");
+});
+
+app.post('/cardDrawn', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.redirect("visualize");
 });
 
 // Because routes/middleware are applied in order,
