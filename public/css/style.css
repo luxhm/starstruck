@@ -1,5 +1,5 @@
 body {
-  background-color: #F1EEE6;
+  background-color: #F5F3EE;
   font-size: 18px;
   color: #C0C0C0;
   font-family: 'optima', sans-serif;
@@ -22,10 +22,14 @@ h2 {
   font-size: 30px;
 }
 
+h3{
+  background-color: #E8E6F1;
+}
+
 div {
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: #F1EEE6;
+  background-color: #F5F3EE;
   overflow: auto;
   border-radius: 10px;
 
@@ -59,7 +63,7 @@ button:focus {
 
 table {
   border-collapse: collapse;
-  background-color: #F1EEE6;
+  background-color: #F5F3EE;
   margin: auto;
   width: 80%;
   color: #BBC2CC;
@@ -94,6 +98,7 @@ img {
 }
 
 footer {
+  margin-top: 30px;
   text-align: center;
   bottom: 0px;
   left: 45%;
@@ -131,7 +136,7 @@ select, input {
 .connectButton {
   border: 1px dashed #9757B0;
   border-radius: 20px;
-  background-color: #F1EEE6;
+  background-color: #F5F3EE;
   color: #BDABBE;
   width: 50%;
   margin-left: 25%;
@@ -154,7 +159,7 @@ select, input {
   padding: 7px;
   margin-left: 50px;
   background-color: #66518a;
-  color: #F1EEE6;
+  color: #F5F3EE;
   margin-right: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -183,7 +188,7 @@ select, input {
   padding: 7px;
   margin-left: 50px;
   background-color: #BDABBE;
-  color: #F1EEE6;
+  color: #F5F3EE;
   margin-left: 25%;
   width: 50%;
 }
@@ -192,9 +197,43 @@ select, input {
   width: 35%;
 }
 
-/*Start: */
+#cardDrawn {
+  text-align: center;
+}
 
-/*End: */
+#visualization {
+  background-color: rgba(0,124,255,0.3);
+  color: black;
+  text-align: center;
+}
+
+/*Start: Login*/
+#left{
+  width: 50%;
+  float: left;
+  background-color: #F5F3EE;
+  margin-bottom:100px;
+
+}
+
+#right{
+  width: 50%;
+  float: right;
+  margin-bottom:100px;
+}
+
+#login{
+  text-align: left;
+  background-color: #F8F7F3;
+  width: 80%;
+  margin-left:10%;
+  box-shadow:3px 5px #CFCDC7;
+  margin-top: 50px;
+}
+
+#FAQ{
+}
+/*End: Login*/
 
 
 /*Start: astrologyEntry*/
@@ -228,19 +267,9 @@ select, input {
   margin-top: 20px;
   margin-left: 5px;
   background-color: #BDABBE;
-  color:#F1EEE6;
+  color:#F5F3EE;
   opacity:.5;
   float: right;
-}
-
-#cardDrawn {
-  text-align: center;
-}
-
-#visualization {
-  background-color: rgba(0,124,255,0.3);
-  color: black;
-  text-align: center;
 }
 
 /*End: astrologyEntry*/
@@ -253,4 +282,9 @@ select, input {
 @font-face {
     font-family: 'luxurious';
     src: url('/images/LuxuriousRoman-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('/images/Vollkorn-Black.ttf');
 }
