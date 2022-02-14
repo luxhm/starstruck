@@ -114,6 +114,17 @@ select, input {
   margin-top: 10px;
 }
 
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 48%;
+    transform: translatex(-50%);
+}
+
+.nav-link{
+  margin-left: 40px;
+  text-align: center;
+}
+
 /**/
 
 .connectButton {
@@ -178,20 +189,14 @@ select, input {
   float: left;
 }
 
-.navbar-nav.navbar-center {
-    position: absolute;
-    left: 48%;
-    transform: translatex(-50%);
-}
-
-.nav-link{
-  margin-left: 40px;
-  text-align: center;
-}
-
 #emotion, #name {
   width: 35%;
 }
+
+/*Start: */
+
+/*End: */
+
 
 /*Start: astrologyEntry*/
 #astrology{
@@ -201,20 +206,16 @@ select, input {
 }
 
 #astrologyForm{
-  width: 40%;
-  margin-right: 100px;
+  width: 30%;
   border: 1px dashed #9757B0;
+  float:left;
+  margin-top:2px;
 }
 
 #astrologyChart{
   width: 50%;
   height: 50%;
   margin-left: 25%;
-}
-
-#zodiacInfo{
-  display: flex;
-  align-items: center;
 }
 
 #bigThree{
@@ -225,9 +226,11 @@ select, input {
 #sunSign, #moonSign, #risingSign {
   width: 50%;
   border-radius: 5px;
-  border: 1px dashed #9757B0;
-  margin-top: 5px;
+  margin-top: 20px;
   margin-left: 5px;
+  background-color: #BDABBE;
+  color:#F1EEE6;
+  opacity:.5;
   float: right;
 }
 
