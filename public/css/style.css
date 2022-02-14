@@ -20,7 +20,6 @@ h2 {
   text-align: center;
   font-family: crayonnette;
   font-size: 30px;
-
 }
 
 div {
@@ -44,7 +43,6 @@ button {
   border: 1px dashed #9757B0;
   border-radius: 20px;
   background-color: #BDABBE;
-
 }
 
 #allImages{
@@ -185,17 +183,32 @@ select, input {
   width: 35%;
 }
 
+/*Start: astrologyEntry*/
+#astrology{
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
 #zodiacForm{
-  width: 100%;
+  width: 40%;
   margin-right: 100px;
   border: 1px dashed #9757B0;
 }
 
 #astrologyChart{
-  margin-left: 100px;
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
 }
 
 #zodiacInfo{
   display: flex;
   align-items: center;
 }
+
+#bigThree{
+  width: 40%;
+  margin-right: 25%;
+}
+/*End: astrologyEntry*/
