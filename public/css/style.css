@@ -259,19 +259,19 @@ select, input {
 }
 
 #bigThree{
-  width: 60%;
-  float: right;
+
+
 }
 
 #sunSign, #moonSign, #risingSign {
-  width: 50%;
+  width: 80%;
+  margin-left: 10%;
   border-radius: 5px;
-  margin-top: 20px;
-  margin-left: 5px;
+  margin-top: 3%;
   background-color: #BDABBE;
   color:#F5F3EE;
   opacity:.5;
-  float: right;
+  text-align: center;
 }
 
 /*End: astrologyEntry*/

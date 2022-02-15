@@ -230,6 +230,12 @@ app.get('/astrologyEntry', function(request, response) {
   response.render("astrologyEntry");
 });
 
+app.get('/astrologyInfo', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("astrologyInfo");
+});
+
 app.post('/drawCard', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
