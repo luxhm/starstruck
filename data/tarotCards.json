@@ -1,110 +1,110 @@
 {
   "The Moon": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg",
-    "Meaning": "The Moon indicates a time when something is not as it appears to be. Perhaps a misunderstanding on your part or a truth you cannot admit to yourself",
-    "Keywords": ["Deception", "Difficult period", "Fear", "Hidden things","Insecurity", "Mental confusion"],
-    "Element": "Water",
-    "Sign": "Pisces",
-    "Positivity": 15
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg",
+    "meaning": "The Moon indicates a time when something is not as it appears to be. Perhaps a misunderstanding on your part or a truth you cannot admit to yourself",
+    "keywords": ["Deception", "Difficult period", "Fear", "Hidden things","Insecurity", "Mental confusion"],
+    "element": "Water",
+    "sign": "Pisces",
+    "positivity": 15
   },
 
   "The Emperor": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
-    "Meaning": "The Emperor is suggestive of stability and security in life. You are on top of things and everything is under your control due to your discipline and self control.",
-    "Keywords": ["Authority", "Father figure", "Law and order", "Leadership","Power", "Promotion"],
-    "Element": "Fire",
-    "Sign": "Aries",
-    "Positivity": 70
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
+    "meaning": "The Emperor is suggestive of stability and security in life. You are on top of things and everything is under your control due to your discipline and self control.",
+    "keywords": ["Authority", "Father figure", "Law and order", "Leadership","Power", "Promotion"],
+    "element": "Fire",
+    "sign": "Aries",
+    "positivity": 70
   },
 
   "The Hierophant": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
-    "Meaning": "The Hierophant stands for tradition and convention. It can represent arranged marriages. Or possibly a teacher or mentor will help in your education.",
-    "Keywords": ["Education", "Learning", "Marriage", "Seeking advice","Spirtual guidance", "Tradition"],
-    "Element": "Earth",
-    "Sign": "Taurus",
-    "Positivity": 85
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
+    "meaning": "The Hierophant stands for tradition and convention. It can represent arranged marriages. Or possibly a teacher or mentor will help in your education.",
+    "keywords": ["Education", "Learning", "Marriage", "Seeking advice","Spirtual guidance", "Tradition"],
+    "element": "Earth",
+    "sign": "Taurus",
+    "positivity": 85
   },
 
   "The Lovers": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg",
-    "Meaning": "The Lovers represent relationships and choices. It indicates some decision about an existing relationship, a temptation of the heart, or a choice of potential partners. Often an aspect of your life will have to be sacrificed; a bachelor(ette)'s lifestyle may be sacrificed and a relationship gained (or vice versa), or one potential partner may be chosen while another is turned down. Whatever the choice, it should not be made lightly, as the ramifications will be lasting.",
-    "Keywords": ["Crossroads", "Choices", "Commitment", "Falling in love","Partnerships"],
-    "Element": "Air",
-    "Sign": "Gemini",
-    "Positivity": 60
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg",
+    "meaning": "The Lovers represent relationships and choices. It indicates some decision about an existing relationship, a temptation of the heart, or a choice of potential partners. Often an aspect of your life will have to be sacrificed; a bachelor(ette)'s lifestyle may be sacrificed and a relationship gained (or vice versa), or one potential partner may be chosen while another is turned down. Whatever the choice, it should not be made lightly, as the ramifications will be lasting.",
+    "keywords": ["Crossroads", "Choices", "Commitment", "Falling in love","Partnerships"],
+    "element": "Air",
+    "sign": "Gemini",
+    "positivity": 60
   },
 
   "The Chariot": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
-    "Meaning": "The Chariot is about overcoming conflicts and moving forward in a positive direction. One needs to keep going on with sheer hard work and commitment, and they will be victorious.",
-    "Keywords": ["A journey", "Ambition", "Confidence", "Drive", "Overcoming obstacles", "Will power"],
-    "Element": "Water",
-    "Sign": "Cancer",
-    "Positivity": 90
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
+    "meaning": "The Chariot is about overcoming conflicts and moving forward in a positive direction. One needs to keep going on with sheer hard work and commitment, and they will be victorious.",
+    "keywords": ["A journey", "Ambition", "Confidence", "Drive", "Overcoming obstacles", "Will power"],
+    "element": "Water",
+    "sign": "Cancer",
+    "positivity": 90
   },
 
   "Strength": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
-    "Meaning": "Strength predicts the triumphant conclusion to a major life problem, situation, or temptation through strength of character. It is a very happy card if you are fighting illness or recovering from injury.",
-    "Keywords": ["Confidence", "Enjoying power", "Inner strength", "Potency","Self-belief", "Virility", "Vitality"],
-    "Element": "Fire",
-    "Sign": "Leo",
-    "Positivity": 85
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
+    "meaning": "Strength predicts the triumphant conclusion to a major life problem, situation, or temptation through strength of character. It is a very happy card if you are fighting illness or recovering from injury.",
+    "keywords": ["Confidence", "Enjoying power", "Inner strength", "Potency","Self-belief", "Virility", "Vitality"],
+    "element": "Fire",
+    "sign": "Leo",
+    "positivity": 85
   },
 
   "The Hermit": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg",
-    "Meaning": " The Hermit suggests that you are in a phase of introspection where you are drawing your attention inwards and looking for answers within. You are in need of a period of inner reflection, away from the current demands of your position.",
-    "Keywords": ["Introspection", "Meditation", "Self-reflection", "Solitude","Soul-searching", "Withdrawn from society"],
-    "Element": "Earth",
-    "Sign": "Virgo",
-    "Positivity": 70
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg",
+    "meaning": " The Hermit suggests that you are in a phase of introspection where you are drawing your attention inwards and looking for answers within. You are in need of a period of inner reflection, away from the current demands of your position.",
+    "keywords": ["Introspection", "Meditation", "Self-reflection", "Solitude","Soul-searching", "Withdrawn from society"],
+    "element": "Earth",
+    "sign": "Virgo",
+    "positivity": 70
   },
 
   "Justice": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
-    "Meaning": "The Justice indicates that the fairest decision will be made. Justice is the sword that cuts through a situation, and it will not be swayed by outer beauty when deciding what is fair and just.",
-    "Keywords": ["Balance", "Equilibrium", "Cause and effect", "Fairness", "Justice","Responsibility"],
-    "Element": "Air",
-    "Sign": "Libra",
-    "Positivity": 80
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
+    "meaning": "The Justice indicates that the fairest decision will be made. Justice is the sword that cuts through a situation, and it will not be swayed by outer beauty when deciding what is fair and just.",
+    "keywords": ["Balance", "Equilibrium", "Cause and effect", "Fairness", "Justice","Responsibility"],
+    "element": "Air",
+    "sign": "Libra",
+    "positivity": 80
   },
 
   "Death": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg",
-    "Meaning": "Unlikely that this Death card actually represents a physical death. Typically it implies an end, possibly of a relationship or interest, and therefore implies an increased sense of self-awareness.",
-    "Keywords": ["Endings", "Failure", "Letting go", "Mortality","Profound change", "Severe illness"],
-    "Element": "Water",
-    "Sign": "Scorpio",
-    "Positivity": 10
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg",
+    "meaning": "Unlikely that this Death card actually represents a physical death. Typically it implies an end, possibly of a relationship or interest, and therefore implies an increased sense of self-awareness.",
+    "keywords": ["Endings", "Failure", "Letting go", "Mortality","Profound change", "Severe illness"],
+    "element": "Water",
+    "sign": "Scorpio",
+    "positivity": 10
   },
 
   "Temperance": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
-    "Meaning": "Temperance indicates that you should learn to bring balance, patience, and moderation in your life. You should take the middle road, avoiding extremes and maintaining a sense of calm.",
-    "Keywords": ["Alchemy", "Balance", "Connecting with your guides", "Harmony","Searching for divine intervention", "Moderation"],
-    "Element": "Fire",
-    "Sign": "Sagittarius",
-    "Positivity": 70
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
+    "meaning": "Temperance indicates that you should learn to bring balance, patience, and moderation in your life. You should take the middle road, avoiding extremes and maintaining a sense of calm.",
+    "keywords": ["Alchemy", "Balance", "Connecting with your guides", "Harmony","Searching for divine intervention", "Moderation"],
+    "element": "Fire",
+    "sign": "Sagittarius",
+    "positivity": 70
   },
 
   "The Devil": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
-    "Meaning": "The Devil represents being seduced by the material world and physical pleasures. Also, The Devil represents living in fear, domination, and bondage, being caged by an overabundance of luxury, discretion should be used in personal and business matters.",
-    "Keywords": ["Bondage", "Fear", "Feeling trapped", "Materialism","Temptation", "Unhealthy relationships"],
-    "Element": "Earth",
-    "Sign": "Capricorn",
-    "Positivity": 2
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+    "meaning": "The Devil represents being seduced by the material world and physical pleasures. Also, The Devil represents living in fear, domination, and bondage, being caged by an overabundance of luxury, discretion should be used in personal and business matters.",
+    "keywords": ["Bondage", "Fear", "Feeling trapped", "Materialism","Temptation", "Unhealthy relationships"],
+    "element": "Earth",
+    "sign": "Capricorn",
+    "positivity": 2
   },
 
   "The Star": {
-    "Photo": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg",
-    "Meaning": "When The Star card appears, you are likely to find yourself feeling inspired. It brings renewed hope and faith and a sense that you are truly blessed by the universe at this time.",
-    "Keywords": ["Astronomy", "Good health", "Hope", "Inspiration","Opportunities", "Spirtuality"],
-    "Element": "Air",
-    "Sign": "Aquarius",
-    "Positivity": 100
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg",
+    "meaning": "When The Star card appears, you are likely to find yourself feeling inspired. It brings renewed hope and faith and a sense that you are truly blessed by the universe at this time.",
+    "keywords": ["Astronomy", "Good health", "Hope", "Inspiration","Opportunities", "Spirtuality"],
+    "element": "Air",
+    "sign": "Aquarius",
+    "positivity": 100
   }
 
 }

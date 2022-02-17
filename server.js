@@ -18,7 +18,6 @@ let randomCard;
 //.............Define server routes..............................//
 //Express checks routes in the order in which they are defined
 
-
 app.get('/', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
