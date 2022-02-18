@@ -59,6 +59,7 @@ app.post('/', function(request, response) {
   }
 });
 
+/*
 //old tarot
 app.get('/tarot', function(request, response) {
     let users = JSON.parse(fs.readFileSync('data/users.json'));
@@ -137,7 +138,7 @@ app.get('/readings', function(request, response) {
     readings: readingsArray
   });
 });
-
+*/
 
 //new routing
 //users
