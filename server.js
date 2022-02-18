@@ -223,7 +223,6 @@ app.get('/connect', function(request, response) {
   response.render("connect");
 });
 
-
 //tarot
 app.get('/drawCard', function(request, response) {
   response.status(200);
