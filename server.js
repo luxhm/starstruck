@@ -15,6 +15,8 @@ app.set('view engine', 'ejs'); //specify templating library
 
 let randomCard;
 
+//app.use(require('./controllers/index_controller'));
+
 //.............Define server routes..............................//
 //Express checks routes in the order in which they are defined
 
@@ -193,36 +195,15 @@ app.get('/user/:userName', function(request, response) {
   }
 });
 
+
+//index
 app.get('/login', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("login");
 });
 
-app.get('/connect', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.render("connect");
-});
-
-app.get('/drawCard', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.render("drawCard");
-});
-
-app.get('/cardDrawn', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.render("cardDrawn");
-});
-
-app.get('/visualize', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.render("visualize");
-});
-
+//astrology
 app.get('/astrologyEntry', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
@@ -233,6 +214,26 @@ app.get('/astrologyInfo', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("astrologyInfo");
+});
+
+//connect
+app.get('/connect', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("connect");
+});
+
+//tarot
+app.get('/drawCard', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("drawCard");
+});
+
+app.get('/cardDrawn', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("cardDrawn");
 });
 
 app.post('/drawCard', function(request, response) {
@@ -247,10 +248,18 @@ app.post('/cardDrawn', function(request, response) {
   response.redirect("visualize");
 });
 
+
+//visualize
 app.post('/visualize', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.redirect("postVisualization");
+});
+
+app.get('/visualize', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("visualize");
 });
 
 app.get('/postVisualization', function(request, response) {
