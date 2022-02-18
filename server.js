@@ -20,6 +20,8 @@ let randomCard;
 //.............Define server routes..............................//
 //Express checks routes in the order in which they are defined
 
+
+//index /login
 app.get('/', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
@@ -57,6 +59,7 @@ app.post('/', function(request, response) {
   }
 });
 
+//old tarot
 app.get('/tarot', function(request, response) {
     let users = JSON.parse(fs.readFileSync('data/users.json'));
     let tarotCards = JSON.parse(fs.readFileSync('data/tarotCards.json'));
@@ -76,7 +79,6 @@ app.get('/tarot', function(request, response) {
       tarotCards: tarotCards,
       randomCard: randomCard
     });
-
 });
 
 
@@ -114,11 +116,9 @@ app.post('/tarot', function(request, response) {
       "errorCode":"400"
     });
   }
-
-
 });
 
-
+//readings
 app.get('/readings', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
@@ -138,33 +138,9 @@ app.get('/readings', function(request, response) {
   });
 });
 
-app.get('/loadManifestations', function(request, response){
-  let name = request.query.manifestName;
-  let manifest = request.query.manifest;
-  if(name && manifest!=""){
 
-      response.status(200);
-      response.setHeader('Content-Type', 'text/html')
-      response.render("loadManifestations",{
-        name: name,
-        manifest: manifest
-  });
-  }
-  else {
-    response.status(400);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("error", {
-      "errorCode":"400"
-    });
-  }
-});
-
-app.get('/manifest', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.render("manifest");
-});
-
+//new routing
+//users
 app.get('/user/:userName', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
@@ -194,7 +170,6 @@ app.get('/user/:userName', function(request, response) {
     });
   }
 });
-
 
 //index
 app.get('/login', function(request, response) {
@@ -248,7 +223,6 @@ app.post('/cardDrawn', function(request, response) {
   response.redirect("visualize");
 });
 
-
 //visualize
 app.post('/visualize', function(request, response) {
   response.status(200);
@@ -266,6 +240,34 @@ app.get('/postVisualization', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("postVisualization");
+});
+
+//manifestations
+app.get('/loadManifestations', function(request, response){
+  let name = request.query.manifestName;
+  let manifest = request.query.manifest;
+  if(name && manifest!=""){
+
+      response.status(200);
+      response.setHeader('Content-Type', 'text/html')
+      response.render("loadManifestations",{
+        name: name,
+        manifest: manifest
+  });
+  }
+  else {
+    response.status(400);
+    response.setHeader('Content-Type', 'text/html')
+    response.render("error", {
+      "errorCode":"400"
+    });
+  }
+});
+
+app.get('/manifest', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("manifest");
 });
 
 // Because routes/middleware are applied in order,
