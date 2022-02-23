@@ -152,6 +152,15 @@ select, input {
     background-color:#FFF;
 }
 
+#newPageButtons {
+  text-align: center;
+  background-color: #F8F7F3;
+  width: 50%;
+  box-shadow:3px 5px #CFCDC7;
+  margin-left: 25%;
+
+}
+
 .navbar-nav.navbar-center {
     position: absolute;
     text-align: center;
@@ -272,9 +281,9 @@ select, input {
 
 /*Start: astrologyEntry*/
 #astrology{
-  width: 95%;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  width: 60%;
+  margin-left: 20%;
+
 }
 
 #astrologyForm{

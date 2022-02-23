@@ -59,7 +59,6 @@ app.post('/', function(request, response) {
   }
 });
 
-<<<<<<< Updated upstream
 /*
 =======
 //about
@@ -222,25 +221,7 @@ app.get('/cardDrawn', function(request, response) {
   response.render("cardDrawn");
 });
 
-app.post('/drawCard', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.redirect("cardDrawn");
-});
-
-app.post('/cardDrawn', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.redirect("visualize");
-});
-
 //visualize
-app.post('/visualize', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.redirect("postVisualization");
-});
-
 app.get('/visualize', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')

@@ -1,5 +1,5 @@
 <html>
-<%- include('partials/header', {title:"Dare to draw a card?"}) -%>
+<%- include('partials/header', {title:"Your Card Is Drawn"}) -%>
 
 <h2>You drew the ___ card!</h2>
 <br>
@@ -13,9 +13,10 @@
 
 <br>
 
-<form action="/cardDrawn" method="POST">
-  <input type="submit" value="VISUALIZE YOUR READING">
-</form>
+<div id="newPageButtons">
+  <a href="/visualize">VISUALIZE YOUR READING</a>
+</div>
+
 
 <%- include('partials/footer') -%>
 </html>
