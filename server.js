@@ -59,7 +59,17 @@ app.post('/', function(request, response) {
   }
 });
 
+<<<<<<< Updated upstream
 /*
+=======
+//about
+app.get('/about', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("about");
+});
+
+>>>>>>> Stashed changes
 //old tarot
 app.get('/tarot', function(request, response) {
     let users = JSON.parse(fs.readFileSync('data/users.json'));
