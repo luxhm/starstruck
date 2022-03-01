@@ -32,14 +32,26 @@ router.get('/user/:userName', function(request, response) {
 
 router.get('/astrologyEntry', function(request, response) {
   response.status(200);
-  response.setHeader('Content-Type', 'text/html')
+  response.setHeader('Content-Type', 'text/html');
   response.render("user/astrologyEntry");
 });
 
 router.get('/astrologyInfo', function(request, response) {
   response.status(200);
-  response.setHeader('Content-Type', 'text/html')
+  response.setHeader('Content-Type', 'text/html');
   response.render("user/astrologyInfo");
+});
+
+router.post('/astrologyEntry', function(request, response) {
+  let userName = request.body.username;
+  let birthday = request.body.birthDay;
+  let birthtime = request.body.birthTime;
+  let birthplace = request.body.birthPlace;
+
+
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html');
+  response.redirect("user/astrologyInfo");
 });
 
 module.exports = router
