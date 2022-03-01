@@ -16,6 +16,7 @@ app.use(require('./controllers/index'));
 app.use(require('./controllers/user_controller'));
 app.use(require('./controllers/tarot_controller'));
 app.use(require('./controllers/manifest_controller'));
+app.use(require('./controllers/connect_controller'));
 
 app.use("", function(request, response) {
   response.redirect('/error?code=400');
