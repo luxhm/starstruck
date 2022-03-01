@@ -7,5 +7,5 @@ const readings = require('../models/connect_model');
 router.get('/connect', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("tarot/connect");
+  response.render("connect/connect");
 });
