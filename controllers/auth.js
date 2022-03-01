@@ -62,12 +62,11 @@ router.get('/auth/google/callback',
 
     if (userID in User.getUser()){
       console.log("already logged in");
-    }
-    else{
+    }else{
       User.createUser(userID, userID.split('.')[0]);//only creates if not in users.json
     }
 
-    response.redirect('/');
+    response.redirect('/astrologyEntry');
   });
 
 router.get("/auth/logout", (request, response) => {

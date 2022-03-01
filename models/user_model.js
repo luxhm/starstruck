@@ -18,3 +18,17 @@ exports.createUser =  function (userID, userName){
     fs.writeFileSync(__dirname+'/../data/users.json', JSON.stringify(users));
   }
 }
+
+exports.saveAstrology = function(userID, userName, birthdate, birthplace, birthtime){
+  let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));
+  if(users[userID]){
+    let userUpdate={
+      "Name": userName,
+      "birthdate": birthdate,
+      "birthplace": birthplace,
+      "birthtime": birthtime,
+    }
+    users[userID] = userUpdate;
+    fs.writeFileSync(__dirname+'/../data/users.json', JSON.stringify(users));
+  }
+}
