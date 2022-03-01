@@ -27,7 +27,7 @@ app.get('/', function(request, response) {
   response.setHeader('Content-Type', 'text/html')
   response.render("index");
 });
-
+/*
 app.post('/', function(request, response) {
   let userName = request.body.userName;
   let userBday = request.body.userBday;
@@ -57,7 +57,7 @@ app.post('/', function(request, response) {
       "errorCode":"400"
     });
   }
-});
+});*/
 
 /*
 =======

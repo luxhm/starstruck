@@ -3,40 +3,55 @@ const express = require('express'),
 
 const User = require('../models/user_model');
 
-router.get('/user/:userName', function(request, response) {
-  let users = User.getUser(userName);
-  let readings = Readings.getReadings(userName);
-  let tarotArray = Cards.getCards(userName);
+//connect
+router.get('/connect', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("connect");
+});
 
-  // using dynamic routes to specify resource request information
-  let userName = request.params.userName;
-  let userBday = request.params.userBday;
-  let userSun = request.params.userSun;
-  let userMoon = request.params.userMoon;
-  let userRising = request.params.userRising;
+//tarot
+router.get('/drawCard', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("drawCard");
+});
 
-  if(users[userName]){
-    response.status(200);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("userDetails",{
-      user: users[userName],
-      readings: readings[userName].card,
-      tarotArray: tarotArray
-   });
-  /*
-  let opponentName = request.params.opponentName;
-  let opponent = Opponent.getOpponent(opponentName);
+router.get('/cardDrawn', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("cardDrawn");
+});
 
-  if(opponent){
-    response.status(200);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("opponent/opponentDetails",{
-      opponent: opponent
-    });
-  }*/
-  else{
-    response.redirect('/error?code=404');
-  }
+router.post('/drawCard', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.redirect("cardDrawn");
+});
+
+router.post('/cardDrawn', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.redirect("visualize");
+});
+
+//visualize
+router.post('/visualize', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.redirect("postVisualization");
+});
+
+router.get('/visualize', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("visualize");
+});
+
+router.get('/postVisualization', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("postVisualization");
 });
 
 module.exports = router

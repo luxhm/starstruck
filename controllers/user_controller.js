@@ -23,20 +23,21 @@ router.get('/user/:userName', function(request, response) {
       readings: readings[userName].card,
       tarotArray: tarotArray
    });
-  /*
-  let opponentName = request.params.opponentName;
-  let opponent = Opponent.getOpponent(opponentName);
-
-  if(opponent){
-    response.status(200);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("opponent/opponentDetails",{
-      opponent: opponent
-    });
-  }*/
   else{
     response.redirect('/error?code=404');
   }
+});
+
+router.get('/astrologyEntry', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("astrologyEntry");
+});
+
+router.get('/astrologyInfo', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("astrologyInfo");
 });
 
 module.exports = router
