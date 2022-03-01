@@ -4,11 +4,17 @@ exports.getUsers = function(){
   let users = JSON.parse(fs.readFileSync(__dirname+'../data/users.json'));
   return users;
 }
-exports.createUser = function(){
-  let user = {
-    
-  }
 
-    JSON.parse(fs.readFileSync(__dirname+'../data/users.json'));
-  return users;
+exports.createUser =  function (userID, userName){
+  let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));
+  if(!users[userID]){
+    let newUser={
+      "Name": userName,
+      "birthdate": [],
+      "birthplace": [],
+      "birthtime": [],
+    }
+    users[userID] = newUser;
+    fs.writeFileSync(__dirname+'/../data/players.json', JSON.stringify(users));
+  }
 }
