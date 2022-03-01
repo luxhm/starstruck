@@ -12,7 +12,10 @@
   "dependencies": {
     "brew": "0.0.8",
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "passport": "^0.5.2",
+    "passport-google-oauth": "^2.0.0",
+    "session": "^0.1.0"
   },
   "keywords": [
     "tarot",
