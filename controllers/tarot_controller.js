@@ -7,51 +7,51 @@ const User = require('../models/user_model');
 router.get('/connect', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("connect");
+  response.render("tarot/connect");
 });
 
 //tarot
 router.get('/drawCard', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("drawCard");
+  response.render("tarot/drawCard");
 });
 
 router.get('/cardDrawn', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("cardDrawn");
+  response.render("tarot/cardDrawn");
 });
 
 router.post('/drawCard', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.redirect("cardDrawn");
+  response.redirect("tarot/cardDrawn");
 });
 
 router.post('/cardDrawn', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.redirect("visualize");
+  response.redirect("tarot/visualize");
 });
 
 //visualize
 router.post('/visualize', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.redirect("postVisualization");
+  response.redirect("tarot/postVisualization");
 });
 
 router.get('/visualize', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("visualize");
+  response.render("tarot/visualize");
 });
 
 router.get('/postVisualization', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("postVisualization");
+  response.render("tarot/postVisualization");
 });
 
 module.exports = router
