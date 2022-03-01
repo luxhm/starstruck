@@ -7,6 +7,12 @@ router.get('/', function(request, response) {
   response.render("login");
 });
 
+router.get('/login', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html')
+  response.render("login");
+});
+
 router.get('/error', function(request, response) {
   const errorCode = request.query.code;
   if (!errorCode) errorCode = 400;
