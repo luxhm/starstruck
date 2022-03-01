@@ -33,13 +33,13 @@ router.get('/user/:userName', function(request, response) {
 router.get('/astrologyEntry', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("astrologyEntry");
+  response.render("user/astrologyEntry");
 });
 
 router.get('/astrologyInfo', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("astrologyInfo");
+  response.render("user/astrologyInfo");
 });
 
 module.exports = router
