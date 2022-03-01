@@ -47,7 +47,9 @@ router.post('/astrologyEntry', function(request, response) {
   let birthday = request.body.birthDay;
   let birthtime = request.body.birthTime;
   let birthplace = request.body.birthPlace;
+  let userID = request.user._json.email;
 
+  User.saveAstrology(userName, birthday, birthplace, birthtime);
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html');

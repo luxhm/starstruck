@@ -31,4 +31,6 @@ exports.saveAstrology = function(userID, userName, birthdate, birthplace, birtht
     users[userID] = userUpdate;
     fs.writeFileSync(__dirname+'/../data/users.json', JSON.stringify(users));
   }
+
+  console.log("astrology saved");
 }
