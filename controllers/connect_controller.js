@@ -1,7 +1,7 @@
 const express = require('express'),
   router = express.Router();
 
-const readings = require('../models/connect_model');
+const Readings = require('../models/connect_model');
 
 //connect
 router.get('/connect', function(request, response) {
@@ -9,3 +9,5 @@ router.get('/connect', function(request, response) {
   response.setHeader('Content-Type', 'text/html')
   response.render("connect/connect");
 });
+
+module.exports = router
