@@ -58,13 +58,14 @@ router.get('/auth/google/callback',
   }),
   function(request, response) {
     console.log(userProfile);
+    let userID = request.user._json.email;
+    User.createUser(userID, userID.split('.')[0]);//only creates if not in users.json
     response.redirect('/');
   });
 
 router.get("/auth/logout", (request, response) => {
   request.logout();
-  let userID = request.user._json.email;
-  User.createUser(userID, userID.split('.')[0]);//only creates if not in users.json
+
   response.redirect('/');
 });
 

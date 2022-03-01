@@ -15,6 +15,6 @@ exports.createUser =  function (userID, userName){
       "birthtime": [],
     }
     users[userID] = newUser;
-    fs.writeFileSync(__dirname+'/../data/players.json', JSON.stringify(users));
+    fs.writeFileSync(__dirname+'/../data/users.json', JSON.stringify(users));
   }
 }
