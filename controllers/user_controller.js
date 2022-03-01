@@ -25,7 +25,7 @@ router.get('/user/:userName', function(request, response) {
       readings: readings[userName].card,
       tarotArray: tarotArray
    });
-  else{
+ } else{
     response.redirect('/error?code=404');
   }
 });
