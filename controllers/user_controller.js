@@ -2,6 +2,8 @@ const express = require('express'),
   router = express.Router();
 
 const User = require('../models/user_model');
+const Readings = require('../models/connect_model');
+const Cards = require('../models/tarot_model');
 
 router.get('/user/:userName', function(request, response) {
   let users = User.getUser(userName);
