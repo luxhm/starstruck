@@ -55,7 +55,7 @@ router.get('/astrologyInfo', function(request, response) {
 
 router.post('/astrologyEntry', function(request, response) {
 
-  let userName = request.body.username;
+  let userName = request.body.userName;
   let birthday = request.body.birthDay;
   let birthtime = request.body.birthTime;
   let birthplace = request.body.birthPlace;
