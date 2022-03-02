@@ -5,10 +5,20 @@ const User = require('../models/user_model');
 const Readings = require('../models/connect_model');
 const Cards = require('../models/tarot_model');
 
+function loggedIn(request, response, next){
+  if (request.user){
+    console.log(request.user);
+    next();
+  }
+  else{
+    response.redirect("/login");
+  }
+}
+/*
 router.get('/user/:userName', function(request, response) {
-  let users = User.getUser(userName);
-  let readings = Readings.getReadings(userName);
-  let tarotArray = Cards.getCards(userName);
+  let users = User.getUser(username);
+  let readings = Readings.getReadings(username);
+  let tarotArray = Cards.getCards(username);
 
   // using dynamic routes to specify resource request information
   let userName = request.params.userName;
@@ -29,6 +39,7 @@ router.get('/user/:userName', function(request, response) {
     response.redirect('/error?code=404');
   }
 });
+*/
 
 router.get('/astrologyEntry', function(request, response) {
   response.status(200);
@@ -43,17 +54,17 @@ router.get('/astrologyInfo', function(request, response) {
 });
 
 router.post('/astrologyEntry', function(request, response) {
+
   let userName = request.body.username;
   let birthday = request.body.birthDay;
   let birthtime = request.body.birthTime;
   let birthplace = request.body.birthPlace;
   let userID = request.user._json.email;
-
-  User.saveAstrology(userName, birthday, birthplace, birthtime);
+  User.saveAstrology(userID, userName, birthday, birthplace, birthtime);
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
-  response.redirect("user/astrologyInfo");
+  response.redirect("astrologyInfo");
 });
 
 module.exports = router
