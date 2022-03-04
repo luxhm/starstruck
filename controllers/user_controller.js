@@ -41,10 +41,14 @@ router.get('/user/:userName', function(request, response) {
 });
 */
 
-router.get('/astrologyEntry', function(request, response) {
+//ONLY EDITED ROUTE
+router.get('/astrologyEntry', loggedIn, function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
-  response.render("user/astrologyEntry");
+  response.render("user/astrologyEntry", {
+    user: request.user,
+    data: User.getUsers();
+  });
 });
 
 router.get('/astrologyInfo', function(request, response) {

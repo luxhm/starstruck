@@ -5,6 +5,16 @@ const User = require('../models/user_model');
 const Readings = require('../models/connect_model');
 const Cards = require('../models/tarot_model');
 
+function loggedIn(request, response, next){
+  if (request.user){
+    console.log(request.user);
+    next();
+  }
+  else{
+    response.redirect("/login");
+  }
+}
+
 //tarot
 router.get('/drawCard', function(request, response) {
   response.status(200);
