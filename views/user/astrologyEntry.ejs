@@ -1,8 +1,7 @@
 <%- include('../partials/header' , {title:"Astrology Chart"}) -%>
 
 <h2>Tell us a little about yourself!</h2>
-
-<div id = "astrology">
+<br>
 <div id = "astrologyForm">
 <form action="/astrologyEntry" method="POST">
 
@@ -10,11 +9,19 @@
   <input type="text" id="userName" name="userName" value=""><br>
   <label for="birthDay">Birthday:</label>
   <input type="date" id="birthDay" name="birthDay" value=""><br>
-  <label for="birthPlace">Place of Birth:</label>
+  <label for="birthPlace">Place of birth (latitude):</label>
+  <input type="text" id="birthPlace" name="birthPlace" value=""><br>
+  <label for="birthPlace">Place of birth (longitude):</label>
   <input type="text" id="birthPlace" name="birthPlace" value=""><br>
 
-  <div class="input-group clockpicker">
-    <label for="birthTime">Time of Birth:</label>
+  <label for="birthTime">Time of birth: </label>
+
+  <input type="time" id="birthTime" name="birthTime"
+         min="0:00" max="24:00" required> <br>
+</div>
+
+<!--  <div class="input-group clockpicker">
+   <label for="birthTime">Time of Birth:</label>
     <input type="text" class="form-control" value="09:30">
     <span class="input-group-addon">
         <span class="glyphicon glyphicon-time"></span>
@@ -31,7 +38,7 @@
   <img id="astrologyChart" src = "images/chart.png" height="500">
 </div>
 
-</div>
+</div> -->
 
 <br>
 <%- include('../partials/footer') -%>

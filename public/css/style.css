@@ -280,17 +280,12 @@ select, input {
 
 
 /*Start: astrologyEntry*/
-#astrology{
-  width: 60%;
-  margin-left: 20%;
-
-}
 
 #astrologyForm{
-  width: 30%;
+  width: 80%;
+  margin-left: 10%;
   border: 1px dashed #9757B0;
-  float:left;
-  margin-top:2px;
+
 }
 
 #astrologyChart{
