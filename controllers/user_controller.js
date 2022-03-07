@@ -47,14 +47,17 @@ router.get('/astrologyEntry', loggedIn, function(request, response) {
   response.setHeader('Content-Type', 'text/html');
   response.render("user/astrologyEntry", {
     user: request.user,
-    data: User.getUsers();
+    data: User.getUsers(),
   });
 });
 
 router.get('/astrologyInfo', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
-  response.render("user/astrologyInfo");
+  response.render("user/astrologyInfo", {
+    user: request.user,
+    data: User.getUsers(),
+  });
 });
 
 router.post('/astrologyEntry', function(request, response) {
@@ -68,7 +71,10 @@ router.post('/astrologyEntry', function(request, response) {
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
-  response.redirect("astrologyInfo");
+  response.redirect("astrologyInfo", {
+    user: request.user,
+    data: User.getUsers(),
+  });
 });
 
 module.exports = router

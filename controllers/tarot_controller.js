@@ -19,25 +19,37 @@ function loggedIn(request, response, next){
 router.get('/drawCard', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("tarot/drawCard");
+  response.render("tarot/drawCard", {
+    user: request.user,
+    cards: Cards.getCards(),
+  });
 });
 
 router.get('/cardDrawn', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("tarot/cardDrawn");
+  response.render("tarot/cardDrawn", {
+    user: request.user,
+    cards: Cards.getCards(),
+  });
 });
 
 router.post('/drawCard', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.redirect("tarot/cardDrawn");
+  response.redirect("tarot/cardDrawn", {
+    user: request.user,
+    cards: Cards.getCards(),
+  });
 });
 
 router.post('/cardDrawn', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.redirect("tarot/visualize");
+  response.redirect("tarot/visualize", {
+    user: request.user,
+    cards: Cards.getCards(),
+  });
 });
 
 //visualize

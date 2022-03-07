@@ -37,10 +37,22 @@ exports.saveAstrology = function(userID, userName, birthdate, birthplace, birtht
 }
 
 //API Async router
-exports.getInfo = async function(title){
+exports.getAstrology = async function(api){
+  let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));
+  let day = users.birthDay.
   try {
-       const resp = await axios.get('https://json.astrologyapi.com/v1/western_horoscope'+api);
-       return resp.data;
+       const resp = await axios.post('https://json.astrologyapi.com/v1/western_horoscope',{
+         day: users.birthDay,
+         month: ,
+         year: ,
+         hour: ,
+         min: ,
+         lat: ,
+         lon: ,
+         tzone: -5
+       }).then(function(response){
+         return response.data;
+       });
    } catch (err) {
        console.error(err);
    }//the try catch is necessary
