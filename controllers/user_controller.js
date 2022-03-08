@@ -47,7 +47,7 @@ router.get('/astrologyEntry', loggedIn, function(request, response) {
   response.setHeader('Content-Type', 'text/html');
   response.render("user/astrologyEntry", {
     user: request.user,
-    data: User.getUsers(),
+    data: User.getUser(),
   });
 });
 
@@ -56,11 +56,11 @@ router.get('/astrologyInfo', function(request, response) {
   response.setHeader('Content-Type', 'text/html');
   response.render("user/astrologyInfo", {
     user: request.user,
-    data: User.getUsers(),
+    data: User.getUser(),
   });
 });
 
-router.post('/astrologyEntry', function(request, response) {
+router.post('/astrologyEntry', async function(request, response) {
 
   let userName = request.body.userName;
   let birthday = request.body.birthDay;
@@ -68,13 +68,13 @@ router.post('/astrologyEntry', function(request, response) {
   let birthplace = request.body.birthPlace;
   let userID = request.user._json.email;
   User.saveAstrology(userID, userName, birthday, birthplace, birthtime);
+  console.log("before getAstrology");
+  await User.getAstrology(userID);
+  console.log("after getAstrology");
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
-  response.redirect("astrologyInfo", {
-    user: request.user,
-    data: User.getUsers(),
-  });
+  response.redirect("astrologyInfo");
 });
 
 module.exports = router

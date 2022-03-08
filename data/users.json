@@ -1,17 +1,1 @@
-{
-  "lux.hogan-murphy22@trinityschoolnyc.org": {
-    "Name": "lux",
-    "birthdate": "2022-03-06",
-    "birthplace": "NYC"
-  },
-  "nathalie.perra22@trinityschoolnyc.org": {
-    "birthdate": "2022-03-15",
-    "birthplace": "So. true."
-  },
-  "anna.sorensen22@trinityschoolnyc.org": {
-    "Name": "anna",
-    "birthdate": [],
-    "birthplace": [],
-    "birthtime": []
-  }
-}
+{"lux.hogan-murphy22@trinityschoolnyc.org":{"Name":"lux","birthdate":"2022-03-09","birthplace":["",""],"birthtime":"13:05"},"nathalie.perra22@trinityschoolnyc.org":{"birthdate":"2022-03-15","birthplace":"So. true."},"anna.sorensen22@trinityschoolnyc.org":{"Name":"anna","birthdate":[],"birthplace":[],"birthtime":[]}}
