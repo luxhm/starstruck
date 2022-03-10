@@ -1,5 +1,6 @@
 const fs = require('fs');
 let axios = require('axios'); //install with npm install axios
+var sdkClient = require('./APIResources');
 
 exports.getUser = function(){
   let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));
@@ -44,6 +45,34 @@ exports.getAstrology = async function(userID){
   let day = bdayArray[2];
   let month = bdayArray[1];
   let year = bdayArray[0];
+
+  var data = {
+      'date': day,
+      'month': month,
+      'year': year,
+      'hour': 1,
+      'minute': 25,
+      'latitude': 25,
+      'longitude': 82,
+      'timezone': 5.5
+  };
+  // api name which is to be called
+  var resource = "astro_details";
+
+  // call horoscope apis
+  sdkClient.call(resource, data.date, data.month, data.year, data.hour, data.minute, data.latitude, data.longitude, data.timezone, function(error, result){
+
+      if(error)
+      {
+          console.log("Error returned!!");
+      }
+      else
+      {
+          console.log('Response has arrived from API server --');
+          console.log(result);
+      }
+  });
+/*
   try {
        const resp = await axios.post('https://json.astrologyapi.com/v1/western_horoscope',{
          day: day,
@@ -58,15 +87,14 @@ exports.getAstrology = async function(userID){
          headers: {
            "authorization": "Basic" + Buffer.from("619075:76390c8427e33ee348caf4f42b2b4e81").toString("base64"), "Content-Type":'application/json'
          }
-       });
-       return resp.data;
-       /*.then(function(resp){
+       }).then(function(resp){
          console.log(resp.data);
          console.log("done");
          return resp.data;
-       });*/
+       });
 
    } catch (err) {
        console.error(err);
    }//the try catch is necessary
+   */
 }

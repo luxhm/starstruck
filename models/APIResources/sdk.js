@@ -2,9 +2,8 @@ var request = require('request');
 var http = require('http');
 
 var baseUrl = "http://api.vedicrishiastro.com/v1/";
-var userID =  "<your-user-id>";
-var apiKey = "<your-api-key>";
-
+var userID =  "619075";
+var apiKey = "76390c8427e33ee348caf4f42b2b4e81";
 
 var getResponse = (resource, data, callback) => {
 	var url = baseUrl + resource;
@@ -86,7 +85,7 @@ var packageMatchMakingData = (maleBirthData, femaleBirthData) => {
 
 
 var api = {
-	
+
 	call: (resource, date, month, year, hour, minute, latitude, longitude, timezone, callback) => {
 		var data = packageHoroData(date, month, year, hour, minute, latitude, longitude, timezone);
 		return getResponse(resource, data, callback);
