@@ -69,7 +69,8 @@ router.post('/astrologyEntry', async function(request, response) {
   let userID = request.user._json.email;
   User.saveAstrology(userID, userName, birthday, birthplace, birthtime);
   console.log("before getAstrology");
-  await User.getAstrology(userID);
+  let astrologyData = await User.getAstrology(userID);
+  console.log(astrologyData);
   console.log("after getAstrology");
 
   response.status(200);
