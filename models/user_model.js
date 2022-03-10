@@ -56,13 +56,16 @@ exports.getAstrology = async function(userID){
          tzone: -5
        }, {
          headers: {
-           "authorization": "Basic" + btoa("619075:76390c8427e33ee348caf4f42b2b4e81"), "Content-Type":'application/json'
+           "authorization": "Basic" + Buffer.from("619075:76390c8427e33ee348caf4f42b2b4e81").toString("base64"), "Content-Type":'application/json'
          }
-       }).then(function(response){
-         console.log(response.data);
-         console.log("done");
-         return response.data;
        });
+       return resp.data;
+       /*.then(function(resp){
+         console.log(resp.data);
+         console.log("done");
+         return resp.data;
+       });*/
+
    } catch (err) {
        console.error(err);
    }//the try catch is necessary
