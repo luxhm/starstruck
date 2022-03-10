@@ -7,7 +7,7 @@ var apiKey = "76390c8427e33ee348caf4f42b2b4e81";
 
 var getResponse = (resource, data, callback) => {
 	var url = baseUrl + resource;
-	var auth = "Basic " + new Buffer(userID + ":" + apiKey).toString('base64');
+	var auth = "Basic " + new Buffer.from(userID + ":" + apiKey).toString('base64');
 	request(
 		{
 			url: url,

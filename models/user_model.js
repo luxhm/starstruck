@@ -1,7 +1,7 @@
 const fs = require('fs');
 let axios = require('axios'); //install with npm install axios
 
-var sdkClient = require('APIResources/sdk');
+var sdkClient = require('../models/APIResources/sdk');
 
 exports.getUser = function(){
   let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));
@@ -41,7 +41,7 @@ exports.saveAstrology = function(userID, userName, birthdate, birthplace, birtht
 //API Async router
 exports.getAstrology = async function(userID){
   let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));
-  console.log(users[userID].birthdate);
+  //console.log(users[userID].birthdate);
   let bdayArray = users[userID].birthdate.split("-");
   let day = bdayArray[2];
   let month = bdayArray[1];
@@ -61,8 +61,8 @@ exports.getAstrology = async function(userID){
   var resource = "astro_details";
 
   // call horoscope apis
-  sdkClient.call(resource, data.date, data.month, data.year, data.hour, data.minute, data.latitude, data.longitude, data.timezone, function(error, result){
-
+  await sdkClient.call(resource, data.date, data.month, data.year, data.hour, data.minute, data.latitude, data.longitude, data.timezone, function(error, result){
+      console.log(resource, data.date, data.month, data.year, data.hour, data.minute, data.latitude, data.longitude, data.timezone);
       if(error)
       {
           console.log("Error returned!!");
