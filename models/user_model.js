@@ -63,8 +63,10 @@ exports.getAstrology = async function(userID){
   // call horoscope apis
   await sdkClient.call(resource, data.date, data.month, data.year, data.hour, data.minute, data.latitude, data.longitude, data.timezone, function(error, result){
       console.log(resource, data.date, data.month, data.year, data.hour, data.minute, data.latitude, data.longitude, data.timezone);
+      console.log("SDKCLIENT: "+  sdkClient);
       if(error)
       {
+          console.log(error);
           console.log("Error returned!!");
       }
       else
