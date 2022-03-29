@@ -122,7 +122,7 @@ select, input {
 
 #nav {
     width: 100%;
-    float: left;
+    text-align: center;
     padding: 0;
     list-style: none;
     background-color: #f2f2f2;
@@ -133,7 +133,7 @@ select, input {
     text-align:center; }
 #nav li a {
     display: block;
-    padding: 8px 15px;
+    padding: 30px 10px;
     text-decoration: none;
     font-weight: bold;
     text-align:center;
