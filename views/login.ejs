@@ -6,7 +6,11 @@
     <a href="/auth/google">LOG IN WITH GOOGLE</a>
     <br>
 </div>
-
+<% if(user){ %>
+<h2>Click to play a round of Paper, Rock, Scissors</h2>
+<% }else{ %>
+<h2>Click to login</h2>
+<% }%>
 <br>
 <div id = "astrology">
   <h3>Why learn about astrology?</h3>
