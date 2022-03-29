@@ -1,36 +1,34 @@
 <%- include('partials/header' , {title:"Login"}) -%>
 
-<h2>Login</h2>
 
+<% if(!user){ %>
+  <h2>Login</h2>
   <div id="newPageButtons">
     <a href="/auth/google">LOG IN WITH GOOGLE</a>
     <br>
 </div>
-<% if(user){ %>
-<h2>Click to play a round of Paper, Rock, Scissors</h2>
-<% }else{ %>
-<h2>Click to login</h2>
-<% }%>
-<br>
-<div id = "astrology">
-  <h3>Why learn about astrology?</h3>
-  <p> text text text text text text text text text text text text text text text text text text </p>
-</div>
+<% } %>
+  <br>
+  <div id = "astrology">
+    <h3>Why learn about astrology?</h3>
+    <p> text text text text text text text text text text text text text text text text text text </p>
+  </div>
 
-<div id = "astrology">
-  <h3>About StarStruck</h3>
-  <p> text text text text text text text text text text text text text text text text text text </p>
-</div>
+  <div id = "astrology">
+    <h3>About StarStruck</h3>
+    <p> text text text text text text text text text text text text text text text text text text </p>
+  </div>
 
-<div id = "astrology">
-  <h3>What are tarot cards?</h3>
-  <p> text text text text text text text text text text text text text text text text text text </p>
-</div>
+  <div id = "astrology">
+    <h3>What are tarot cards?</h3>
+    <p> text text text text text text text text text text text text text text text text text text </p>
+  </div>
 
-<div id = "astrology">
-  <h3>Why Manifest?</h3>
-  <p> text text text text text text text text text text text text text text text text text text </p>
-</div>
+  <div id = "astrology">
+    <h3>Why Manifest?</h3>
+    <p> text text text text text text text text text text text text text text text text text text </p>
+  </div>
+
 
 <br>
 <%- include('partials/footer') -%>

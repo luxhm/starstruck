@@ -103,7 +103,9 @@ router.get('/visualize', function(request, response) {
 router.get('/postVisualization', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("tarot/postVisualization");
+  response.render("tarot/postVisualization",{
+    user: request.user
+  });
 });
 
 module.exports = router

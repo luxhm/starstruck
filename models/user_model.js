@@ -22,14 +22,16 @@ exports.createUser =  function (userID, userName){
   }
 }
 
-exports.saveAstrology = function(userID, userName, birthdate, birthplace, birthtime){
+exports.saveAstrology = function(userID, userName, birthdate, sunSign, moonSign, risingSign){
   let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));
+  console.log(sunSign);
   if(users[userID]){
     let userUpdate={
-      "Name": userName,
+      "name": userName,
       "birthdate": birthdate,
-      "birthplace": birthplace,
-      "birthtime": birthtime,
+      "sunSign": sunSign,
+      "moonSign": moonSign,
+      "risingSign": risingSign
     }
     users[userID] = userUpdate;
     fs.writeFileSync(__dirname+'/../data/users.json', JSON.stringify(users));

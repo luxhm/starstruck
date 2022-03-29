@@ -23,7 +23,8 @@ router.get('/loadManifestations', function(request, response){
       response.setHeader('Content-Type', 'text/html')
       response.render("manifest/loadManifestations",{
         name: name,
-        manifest: manifest
+        manifest: manifest,
+        user: request.user
   });
   }
   else {
@@ -36,7 +37,9 @@ router.get('/loadManifestations', function(request, response){
 router.get('/manifest', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("manifest/manifest");
+  response.render("manifest/manifest",{
+    user: request.user
+  });
 });
 
 module.exports = router

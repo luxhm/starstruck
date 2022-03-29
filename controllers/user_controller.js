@@ -64,13 +64,13 @@ router.post('/astrologyEntry', async function(request, response) {
 
   let userName = request.body.userName;
   let birthday = request.body.birthDay;
-  let birthtime = request.body.birthTime;
-  let birthplace = request.body.birthPlace;
+  console.log(request.body.birthDay);
+  let sunSign = request.body.sunSign;
+  let moonSign = request.body.moonSign;
+  let risingSign = request.body.risingSign;
   let userID = request.user._json.email;
-  User.saveAstrology(userID, userName, birthday, birthplace, birthtime);
-  console.log("before getAstrology");
-  await User.getAstrology(userID);
-  console.log("after getAstrology");
+  User.saveAstrology(userID, userName, birthday, sunSign, moonSign, risingSign);
+
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html');

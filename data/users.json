@@ -1,1 +1,9 @@
-{"lux.hogan-murphy22@trinityschoolnyc.org":{"Name":"lux","birthdate":"2022-03-01","birthplace":["",""],"birthtime":"10:24"},"nathalie.perra22@trinityschoolnyc.org":{"birthdate":"2022-03-15","birthplace":"So. true."},"anna.sorensen22@trinityschoolnyc.org":{"Name":"anna","birthdate":[],"birthplace":[],"birthtime":[]}}
+{
+  "lux.hogan-murphy22@trinityschoolnyc.org": {
+    "name": "lux",
+    "birthdate": "2022-03-09",
+    "sunSign": "Taurus",
+    "moonSign": "Capricorn",
+    "risingSign": "Capricorn"
+  }
+}
