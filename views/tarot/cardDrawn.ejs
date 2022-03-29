@@ -1,10 +1,10 @@
 <html>
 <%- include('../partials/header', {title:"Your Card Is Drawn"}) -%>
 
-<h2>You drew the ___ card!</h2>
-<br>
+<h2>You drew <%= randomCard %> card!</h2>
 <div id="cardDrawn">
-<h4>[IMAGE OF CARD] </h4>
+<img src= <%= cards[randomCard].photo %> >
+<br>
 </div>
 <div id = "tarotBoxes2">
 <h4>The ___ card symbolizes ___ and is commonly associated with ___.</h4>

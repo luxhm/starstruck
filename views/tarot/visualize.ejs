@@ -6,6 +6,11 @@
 <br>
 <br>
 <br>
+<% let cardsLength = readings[user._json.email].card.length %>
+
+<%= console.log(readings[user._json.email].card[cardsLength-1]) %>
+  <h4> <%= readings[user._json.email].card[cardsLength-1] %> </h4>
+
   <h4>[IMAGE OF CARD] </h4>
   <h4>[Background color is determined by the user's sun sign and brightness is determined by the card's positivity] </h4>
   <h4>[Keywords associated with card] </h4>
