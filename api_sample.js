@@ -5,8 +5,7 @@ var userId = '619075';
 var apiKey = '76390c8427e33ee348caf4f42b2b4e81';
 
 doit();
-
- async function doit(){
+async function doit(){
 
 try {
   await axios.post('https://json.astrologyapi.com/v1/western_horoscope', {
