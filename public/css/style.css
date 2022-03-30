@@ -161,6 +161,14 @@ select, input {
 
 }
 
+.fb-login-button{
+  text-align: center;
+  margin-left: 25%;
+  width: 50%;
+
+
+}
+
 .navbar-nav.navbar-center {
     position: absolute;
     text-align: center;

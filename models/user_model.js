@@ -1,7 +1,7 @@
 const fs = require('fs');
 let axios = require('axios'); //install with npm install axios
 
-var sdkClient = require('../models/APIResources/sdk');
+//var sdkClient = require('../models/APIResources/sdk');
 
 exports.getUser = function(){
   let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));
