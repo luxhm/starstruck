@@ -40,6 +40,13 @@ exports.saveAstrology = function(userID, userName, birthdate, sunSign, moonSign,
   console.log("astrology saved");
 }
 
+exports.getFacebook = function(){
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+    console.log(response);
+});
+}
+
 //API Async router
 exports.getAstrology = async function(userID){
   let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));

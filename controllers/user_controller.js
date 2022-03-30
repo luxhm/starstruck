@@ -60,7 +60,6 @@ router.get('/astrologyInfo', function(request, response) {
 });
 
 router.post('/astrologyEntry', async function(request, response) {
-
   let userName = request.body.userName;
   let birthday = request.body.birthDay;
   console.log(request.body.birthDay);
@@ -69,6 +68,7 @@ router.post('/astrologyEntry', async function(request, response) {
   let risingSign = request.body.risingSign;
   let userID = request.user._json.email;
   User.saveAstrology(userID, userName, birthday, sunSign, moonSign, risingSign);
+  User.getFacebook();
 
 
   response.status(200);
