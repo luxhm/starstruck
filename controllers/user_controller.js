@@ -41,7 +41,6 @@ router.get('/user/:userName', function(request, response) {
 });
 */
 
-//ONLY EDITED ROUTE
 router.get('/astrologyEntry', loggedIn, function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html');

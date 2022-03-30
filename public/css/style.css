@@ -195,6 +195,16 @@ select, input {
   font-size: 30px;
 }
 
+#signInfo{
+  text-align: center;
+  border: 1px dashed #9757B0;
+  border-radius: 20px;
+  padding: 1%;
+  margin-left: 25%;
+  width: 50%;
+
+}
+
 #allImages{
   float: left;
   margin-left: 120px;
@@ -303,19 +313,12 @@ select, input {
 }
 
 #bigThree{
-
-
-}
-
-#sunSign, #moonSign, #risingSign {
-  width: 80%;
-  margin-left: 10%;
-  border-radius: 5px;
-  margin-top: 3%;
-  background-color: #BDABBE;
-  color:#F5F3EE;
-  opacity:.5;
   text-align: center;
+  border: 1px dashed #9757B0;
+  border-radius: 20px;
+  padding: 1%;
+  margin-left: 25%;
+  width: 50%;
 }
 
 /*End: astrologyEntry*/

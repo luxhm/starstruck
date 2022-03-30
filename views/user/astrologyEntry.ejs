@@ -1,8 +1,16 @@
 <%- include('../partials/header' , {title:"Astrology Chart"}) -%>
 
 <h2>Tell us a little about yourself!</h2>
-<br>
-<a href="https://cafeastrology.com/whats-my-ascendant-sign.html">Click here to calculate your rising sign</a>
+<div id = "signInfo">
+<h5> Click below for information about how to calculate your:
+   <br>
+   <a href="https://cafeastrology.com/whats-my-sun-sign.html">Sun sign</a>
+   <br>
+   <a href="https://cafeastrology.com/whats-my-moon-sign.html">Moon sign</a>
+   <br>
+   <a href="https://cafeastrology.com/whats-my-ascendant-sign.html">Rising sign</a>
+</h5>
+</div>
 
 <div id = "astrologyForm">
 <form action="/astrologyEntry" method="POST">
