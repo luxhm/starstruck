@@ -46,5 +46,9 @@ exports.getHoroscope = async function(sign){
    /*} catch (err) {
        console.error(err);
 	     return {message:”Error loading data”};
+<<<<<<< Updated upstream
    }*/
+=======
+   }
+>>>>>>> Stashed changes
 }
