@@ -1,6 +1,7 @@
 const express = require('express'),
- router = express.Router();
-const Callback = require('./axiosAsync');
+router = express.Router();
+
+const axios = require('axios'); //install with npm install axios
 
 const User = require('../models/user_model');
 const Readings = require('../models/connect_model');
@@ -34,7 +35,13 @@ router.get('/astrologyInfo', function(request, response) {
   });
 });
 
-router.get('/horoscope', function(request, response) {
+router.get('/horoscope', async function(request, response) {
+  let userID = request.user._json.email;
+  let userInfo = User.getUser;
+  let sign = userInfo[userID.sunSign];
+  let data = await Async.getUser(sign);
+  response.send(data);
+
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
   response.render("user/horoscope", {
@@ -43,13 +50,14 @@ router.get('/horoscope', function(request, response) {
   });
 });
 
+/*
 router.post('/horoscope', function(request, response) {
   let userID = request.user._json.email;
   let userInfo = User.getUser;
   let sign = userInfo[userID.sunSign];
   let data = await Async.getHoroscope(sign);
   response.send(data);
-});
+});*/
 
 router.post('/astrologyEntry', async function(request, response) {
   let userName = request.body.userName;

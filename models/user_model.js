@@ -1,5 +1,6 @@
 const fs = require('fs');
-let axios = require('axios'); //install with npm install axios
+const axios = require('axios'); //install with npm install axios
+
 
 //var sdkClient = require('../models/APIResources/sdk');
 
@@ -41,7 +42,7 @@ exports.saveAstrology = function(userID, userName, birthdate, sunSign, moonSign,
 
 exports.getHoroscope = async function(sign){
   try {
-       const resp = await axios.post('https://aztro.sameerkumar.website/?sign='+sign+'&day=today');
+       const resp = await axios.get('https://aztro.sameerkumar.website/?sign='+sign+'&day=today');
        return resp.data;
    } catch (err) {
        console.error(err);
