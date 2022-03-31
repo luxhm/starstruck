@@ -16,7 +16,6 @@ function loggedIn(request, response, next){
   }
 }
 
-//tarot
 router.get('/drawCard', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html')

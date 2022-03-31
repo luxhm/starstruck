@@ -54,7 +54,6 @@ router.get('/horoscope', async function(request, response) {
 router.post('/astrologyEntry', async function(request, response) {
   let userName = request.body.userName;
   let birthday = request.body.birthDay;
-  console.log(request.body.birthDay);
   let sunSign = request.body.sunSign;
   let moonSign = request.body.moonSign;
   let risingSign = request.body.risingSign;

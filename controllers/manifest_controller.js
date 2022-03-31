@@ -17,7 +17,6 @@ router.get('/loadManifestations', function(request, response){
   let name = request.query.manifestName;
   let manifest = request.query.manifest;
   if(name && manifest!=""){
-
       response.status(200);
       response.setHeader('Content-Type', 'text/html')
       response.render("manifest/loadManifestations",{
