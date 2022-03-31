@@ -41,12 +41,13 @@ router.get('/horoscope', async function(request, response) {
   let userInfo = User.getUser();
   let sign = userInfo[userID].sunSign;
   let data = await User.getHoroscope(sign);
-  response.send(data);
+  //response.send(data);
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
   response.render("user/horoscope", {
     user: request.user,
     data: User.getUser(),
+    horoscope: data,
   });
 
 });
