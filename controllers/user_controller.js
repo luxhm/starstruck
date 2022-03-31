@@ -50,14 +50,14 @@ router.get('/horoscope', async function(request, response) {
   });
 });
 
-/*
+
 router.post('/horoscope', function(request, response) {
   let userID = request.user._json.email;
-  let userInfo = User.getUser;
+  let userInfo = User.getUser();
   let sign = userInfo[userID.sunSign];
-  let data = await Async.getHoroscope(sign);
+  let data = await User.getHoroscope(sign);
   response.send(data);
-});*/
+});
 
 router.post('/astrologyEntry', async function(request, response) {
   let userName = request.body.userName;
