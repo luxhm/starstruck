@@ -36,18 +36,19 @@ router.get('/astrologyInfo', function(request, response) {
 });
 
 router.get('/horoscope', async function(request, response) {
+
   let userID = request.user._json.email;
   let userInfo = User.getUser;
   let sign = userInfo[userID.sunSign];
   let data = await User.getHoroscope(sign);
   response.send(data);
-
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
   response.render("user/horoscope", {
     user: request.user,
     data: User.getUser(),
   });
+
 });
 
 /*
