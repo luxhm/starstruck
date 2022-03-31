@@ -59,6 +59,15 @@ router.get('/astrologyInfo', function(request, response) {
   });
 });
 
+router.get('/horoscope', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html');
+  response.render("user/horoscope", {
+    user: request.user,
+    data: User.getUser(),
+  });
+});
+
 router.post('/astrologyEntry', async function(request, response) {
   let userName = request.body.userName;
   let birthday = request.body.birthDay;
