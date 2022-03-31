@@ -1,5 +1,6 @@
 const express = require('express'),
-  router = express.Router();
+ router = express.Router();
+const Callback = require('./axiosAsync');
 
 const User = require('../models/user_model');
 const Readings = require('../models/connect_model');

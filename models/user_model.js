@@ -39,9 +39,12 @@ exports.saveAstrology = function(userID, userName, birthdate, sunSign, moonSign,
   console.log("astrology saved");
 }
 
-exports.getFacebook = function(){
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-    console.log(response);
-});
+exports.getHoroscope = async function(userID,sign){
+  try {
+       const resp = await axios.post('https://aztro.sameerkumar.website/?sign='+sign+'&day=today');
+       return resp.data;
+   } catch (err) {
+       console.error(err);
+	return {message:”Error loading data”};
+   }
 }
