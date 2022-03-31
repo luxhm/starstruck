@@ -68,8 +68,6 @@ router.post('/astrologyEntry', async function(request, response) {
   let risingSign = request.body.risingSign;
   let userID = request.user._json.email;
   User.saveAstrology(userID, userName, birthday, sunSign, moonSign, risingSign);
-  User.getFacebook();
-
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
