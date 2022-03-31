@@ -59,29 +59,5 @@ router.post('/cardDrawn', function(request, response) {
   });
 });
 
-//visualize
-router.post('/visualize', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.redirect("tarot/postVisualization");
-});
-
-router.get('/visualize', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.render("tarot/visualize", {
-    user: request.user,
-    cards: Cards.getCards(),
-    readings: Readings.getReadings()
-  });
-});
-
-router.get('/postVisualization', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.render("tarot/postVisualization",{
-    user: request.user
-  });
-});
 
 module.exports = router

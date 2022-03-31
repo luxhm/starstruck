@@ -7,16 +7,19 @@
 <br>
 </div>
 <div id = "tarotBoxes2">
-<h4><%= randomCard %> card is commonly associated with <%= cards[randomCard].element %>.</h4>
+<h4> <%= cards[randomCard].meaning %></h4>
+<h4><%= randomCard %> card is associated with the <%= cards[randomCard].element %> element.</h4>
+<h4> Keywords:
+  <ul>
+  <% for (let i=0; i< cards[randomCard].keywords.length; i++){ %>
+  <li> <%= cards[randomCard].keywords[i] %></li>
+  <% } %>
+</h4>
+
 <h4>This card suggests that your future has a positivity of <%= cards[randomCard].positivity %> percent.</h4>
 </div>
 
 <br>
-
-<div id="newPageButtons">
-  <a href="/visualize">VISUALIZE YOUR READING</a>
-</div>
-
 
 <%- include('../partials/footer') -%>
 </html>

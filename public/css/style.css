@@ -250,8 +250,8 @@ select, input {
   margin-left: 50px;
   background-color: #BDABBE;
   color: #F5F3EE;
-  margin-left: 25%;
-  width: 50%;
+  margin-left: 10%;
+  width: 80%;
 }
 
 #emotion, #name {
