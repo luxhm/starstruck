@@ -31,7 +31,8 @@ router.get('/error', function(request, response) {
   response.setHeader('Content-Type', 'text/html')
   response.render("error", {
     "errorCode": errorCode,
-    "details": errors[errorCode]
+    "details": errors[errorCode],
+    user: request.user
   });
 });
 

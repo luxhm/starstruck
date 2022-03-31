@@ -31,7 +31,7 @@ router.get('/cardDrawn', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let tarotCards = JSON.parse(fs.readFileSync('data/tarotCards.json'));
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
-
+/*
   let tarotArray = [];
   for(i in tarotCards){
     tarotArray.push(i);
@@ -55,6 +55,8 @@ router.get('/cardDrawn', function(request, response) {
       fs.writeFileSync('data/readings.json', JSON.stringify(readings));
     }
   }
+*/
+  let randomCard = Cards.drawSaveCard()
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("tarot/cardDrawn", {

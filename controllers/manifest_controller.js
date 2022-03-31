@@ -1,5 +1,5 @@
-const express = require('express'),
-  router = express.Router();
+const express = require('express')
+router = express.Router();
 
 const User = require('../models/user_model');
 
@@ -30,7 +30,7 @@ router.get('/loadManifestations', function(request, response){
   else {
     response.status(400);
     response.setHeader('Content-Type', 'text/html')
-    response.redirect('/error?code=404');
+    response.redirect('/error?code=400');
   }
 });
 
