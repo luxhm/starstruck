@@ -13,7 +13,6 @@ function loggedIn(request, response, next){
   }
 }
 
-//manifestations
 router.get('/loadManifestations', function(request, response){
   let name = request.query.manifestName;
   let manifest = request.query.manifest;
