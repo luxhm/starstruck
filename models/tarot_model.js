@@ -5,7 +5,7 @@ exports.getCards = function(){
   return cards;
 }
 
-exports.drawSaveCard = function(){
+exports.drawSaveCard = function(request){
   let users = JSON.parse(fs.readFileSync(__dirname+'/../data/users.json'));
   let tarotCards = JSON.parse(fs.readFileSync(__dirname+'/../data/tarotCards.json'));
   let readings = JSON.parse(fs.readFileSync(__dirname+'/../data/readings.json'));
@@ -33,7 +33,7 @@ exports.drawSaveCard = function(){
       fs.writeFileSync('data/readings.json', JSON.stringify(readings));
     }
   }
-return randomCard;
+return randomCard
 
 
 }

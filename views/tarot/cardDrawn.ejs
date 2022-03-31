@@ -3,12 +3,12 @@
 
 <h2>You drew <%= randomCard %> card!</h2>
 <div id="cardDrawn">
-<img src= <%= cards[randomCard].photo %> >
+<img src= <%= cards[randomCard].photo %> width=22% >
 <br>
 </div>
 <div id = "tarotBoxes2">
-<h4>The <%= randomCard %> card is commonly associated with <%= cards[randomCard].element %>.</h4>
-<h4>This card suggests that your future has a position of <%= cards[randomCard].positivity %> percent.</h4>
+<h4><%= randomCard %> card is commonly associated with <%= cards[randomCard].element %>.</h4>
+<h4>This card suggests that your future has a positivity of <%= cards[randomCard].positivity %> percent.</h4>
 </div>
 
 <br>

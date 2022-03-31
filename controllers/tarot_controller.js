@@ -31,32 +31,7 @@ router.get('/cardDrawn', function(request, response) {
   let users = JSON.parse(fs.readFileSync('data/users.json'));
   let tarotCards = JSON.parse(fs.readFileSync('data/tarotCards.json'));
   let readings = JSON.parse(fs.readFileSync('data/readings.json'));
-/*
-  let tarotArray = [];
-  for(i in tarotCards){
-    tarotArray.push(i);
-  }
-
-  let randomNum = Math.floor(Math.random()*11)+1;
-  randomCard = tarotArray[randomNum];
-  let userEmail = request.user._json.email;
-
-  if (userEmail){
-    if (userEmail in readings) {
-      readings[userEmail].card.push(randomCard);
-      fs.writeFileSync('data/readings.json', JSON.stringify(readings));
-    }
-    else {
-      let newReading = {
-        "name": userEmail,
-        "card": [randomCard],
-      }
-      readings[userEmail] = newReading;
-      fs.writeFileSync('data/readings.json', JSON.stringify(readings));
-    }
-  }
-*/
-  let randomCard = Cards.drawSaveCard()
+  let randomCard = Cards.drawSaveCard(request);
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
   response.render("tarot/cardDrawn", {
