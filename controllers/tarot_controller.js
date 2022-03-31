@@ -4,7 +4,6 @@ const ejs = require('ejs');
   router = express.Router();
 
 const User = require('../models/user_model');
-const Readings = require('../models/connect_model');
 const Cards = require('../models/tarot_model');
 
 function loggedIn(request, response, next){

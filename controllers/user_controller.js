@@ -4,7 +4,6 @@ router = express.Router();
 const axios = require('axios'); //install with npm install axios
 
 const User = require('../models/user_model');
-const Readings = require('../models/connect_model');
 const Cards = require('../models/tarot_model');
 
 function loggedIn(request, response, next){
