@@ -39,12 +39,12 @@ exports.saveAstrology = function(userID, userName, birthdate, sunSign, moonSign,
   console.log("astrology saved");
 }
 
-exports.getHoroscope = async function(userID,sign){
-  try {
+exports.getHoroscope = async function(sign){
+  //try {
        const resp = await axios.post('https://aztro.sameerkumar.website/?sign='+sign+'&day=today');
        return resp.data;
-   } catch (err) {
+   /*} catch (err) {
        console.error(err);
-	return {message:”Error loading data”};
-   }
+	     return {message:”Error loading data”};
+   }*/
 }
